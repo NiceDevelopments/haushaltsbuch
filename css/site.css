@@ -299,6 +299,7 @@ td strong { color: var(--ink); }
 .app-box__shot { display: flex; justify-content: center; }
 .app-box__shot .phone { width: 300px; }
 .app-box.slim { margin-top: 2rem; }
+.app-box__more { margin: 1rem 0 0; }
 @media (min-width: 40rem) { .app-box:has(.app-box__shot) { grid-template-columns: 1fr 300px; } }
 .related { padding-left: 1.1rem; }
 

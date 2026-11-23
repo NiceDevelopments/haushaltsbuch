@@ -38,6 +38,11 @@ Suchmaschinen erscheinen. Die Anschrift steht nur hinter einem Ausklapper.
 - Beispielbeträge sind erfunden. Nie Gideons echte Zahlen.
 - Jede Anleitung muss ohne App nützlich sein; die App kommt am Ende als Werkzeug.
 - Keine Rang- oder Superlativ-Aussagen („beste“, „einfachste“).
+  Ausnahme seit 23.11.2026 (UWG-sicher): als erklärtes Ziel („Das Ziel: das einfachste Haushaltsbuch, das es gibt“)
+  oder als allgemeine Methodenaussage bzw. Frage („Was ist das einfachste Haushaltsbuch?“) – nie als Tatsache über die App.
+- Markenname = Suchbegriff: Title und H1 der Startseiten tragen „Einfaches Haushaltsbuch“ / „Simple Household Budget“.
+  Achtung: Bei Google Play gibt es eine fremde App mit demselben deutschen Namen (wscellbox) und eine „Simple Household Budget App“
+  (gamelab) – deshalb Herausgeber Nice Developments im JSON-LD.
 - Neue Anleitung: in beiden `content_*.py` mit derselben `id` anlegen, dann bauen – hreflang,
   Sitemap, Übersicht und „Weitere Anleitungen“ ergeben sich von selbst.
 

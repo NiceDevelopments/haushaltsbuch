@@ -13,6 +13,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/"/>
   </url>
   <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/einfaches-haushaltsbuch-fuehren/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/einfaches-haushaltsbuch-fuehren/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/simple-household-budget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/simple-household-budget/"/>
+  </url>
+  <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-darf-ich-pro-tag-ausgeben/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-darf-ich-pro-tag-ausgeben/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-can-i-spend-per-day/"/>
@@ -65,6 +71,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/simple-household-budget/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/einfaches-haushaltsbuch-fuehren/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/simple-household-budget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/simple-household-budget/"/>
   </url>
   <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-can-i-spend-per-day/</loc>

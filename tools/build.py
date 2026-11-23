@@ -213,6 +213,7 @@ def app_ld(code: str) -> dict:
     data = {
         "@type": "SoftwareApplication",
         "name": c["app_name"],
+        "alternateName": c["home"]["alt_names"],
         "operatingSystem": "Android",
         "applicationCategory": "FinanceApplication",
         "description": c["home"]["desc"],
@@ -247,7 +248,16 @@ def home(code: str) -> str:
         f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
         for g in c["guides"])
     graph = {"@context": "https://schema.org", "@graph": [app_ld(code), {
-        "@type": "WebSite", "name": c["app_name"], "url": abs_url(home_path(code)), "inLanguage": code}]}
+        "@type": "WebSite", "name": c["app_name"], "alternateName": h["alt_names"],
+        "url": abs_url(home_path(code)), "inLanguage": code}]}
+    sm = h["simple"]
+    simple = f"""<section class="simple"><div class="wrap wide">
+    <p class="kicker">{e(sm['kicker'])}</p>
+    <h2>{e(sm['h2'])}</h2>
+    <p class="lead">{inline(sm['lead'])}</p>
+    <ul class="ticks">{''.join(f"<li>{inline(x)}</li>" for x in sm['points'])}</ul>
+    <p>{inline(sm['more'])}</p>
+  </div></section>"""
     body = f"""{header(code, alts)}
 <main id="main">
   <section class="hero"><div class="wrap wide hero__grid">
@@ -259,6 +269,8 @@ def home(code: str) -> str:
     </div>
     <div class="hero__shot">{phone(h['hero_shot'], shots[h['hero_shot']], eager=True, w=400, toast_code=code)}</div>
   </div></section>
+
+  {simple}
 
   {feats}
 
@@ -337,7 +349,8 @@ def guide_page(code: str, g: dict) -> str:
     app_html = (f'<section class="app-box" aria-labelledby="app-h"><div class="app-box__text">'
                 f'<p class="kicker">{e(u["with_app"])}</p><h2 id="app-h">{e(app["h2"])}</h2>'
                 + "".join(block(code, b) for b in app["body"])
-                + f'{play_badge(code)}</div>'
+                + f'{play_badge(code)}'
+                + f'<p class="app-box__more"><a href="{href(home_path(code))}">{e(u["app_more"])}</a></p></div>'
                 + (f'<div class="app-box__shot">{phone(app["shot"], app["alt"])}</div>' if app.get("shot") else "")
                 + "</section>")
     others = "".join(f'<li><a href="{href(guide_path(code, o))}">{e(o["h1"])}</a></li>'

@@ -10,6 +10,8 @@ ranken Banken, Testportale und Excel-Vorlagen. Erreichbar sind genaue Fragen:
 - Budget ab Gehaltseingang / Gehalt kommt am 28. / Monatsbudget nicht ab dem 1.
 - Geld übrig am Monatsende / Übertrag in den nächsten Monat
 - Haushaltsbuch führen Tipps / durchhalten
+Seit 23.11.2026 zusätzlich der Markenname als Suchbegriff: einfaches Haushaltsbuch (App),
+einfachstes Haushaltsbuch (nur als Ziel/Frage, UWG) – Startseite und Anleitung "simple".
 """
 
 APP = "Einfaches Haushaltsbuch"
@@ -32,17 +34,19 @@ C = {
         "more_guides": "Weitere Anleitungen",
         "play_soon": "Bald bei Google Play – die App ist im letzten Test.",
         "play_cta": "Bei Google Play laden",
+        "app_more": "Einfaches Haushaltsbuch – die App im Überblick",
         "footer_tag": "Haushaltsbuch für Android, radikal einfach.",
         "trademark": "Google Play und Android sind Marken von Google LLC.",
     },
 
     # ------------------------------------------------------------ Startseite
     "home": {
-        "title": "Einfaches Haushaltsbuch – Android-App ohne Bankverbindung und Anmeldung",
-        "desc": "Betrag eintippen, speichern, fertig. Das Haushaltsbuch für Android zeigt, was nach den Fixkosten übrig ist – ohne Konto, ohne Bank, alles auf dem Telefon.",
-        "kicker": "Haushaltsbuch-App für Android",
-        "h1": "Haushaltsbuch, radikal einfach.",
-        "lead": "Eine Ausgabe eintragen heißt: **Betrag eintippen, Speichern antippen.** Die App zeigt dir in einer großen Zahl, wie viel nach den Fixkosten in diesem Monat noch übrig ist. Kein Konto, keine Bankverbindung, keine Cloud.",
+        "title": "Einfaches Haushaltsbuch – App für Android, ohne Bank und Anmeldung",
+        "desc": "Einfaches Haushaltsbuch für Android: Betrag eintippen, speichern, fertig. Zeigt, was nach den Fixkosten übrig ist – ohne Konto, ohne Bank, alles auf dem Handy.",
+        "alt_names": ["Haushaltsbuch", "Simple Household Budget"],
+        "kicker": "App für Android",
+        "h1": "Einfaches Haushaltsbuch",
+        "lead": "Radikal einfach. Eine Ausgabe eintragen heißt: **Betrag eintippen, Speichern antippen.** Die App zeigt dir in einer großen Zahl, wie viel nach den Fixkosten in diesem Monat noch übrig ist. Kein Konto, keine Bankverbindung, keine Cloud.",
         "meter_label": "Verfügbar",
         "meter_num": "612",
         "meter_cents": ",40 €",
@@ -50,7 +54,7 @@ C = {
         "meter_aria": "Beispiel: verfügbar 612,40 Euro. Der Balken ist zu 38 Prozent gefüllt, der Monat zur Hälfte vorbei.",
         "hero_shot": "de-start.webp",
         "shots": [
-            ["de-start.webp", "Startbildschirm des Haushaltsbuchs: oben groß „Verfügbar 1.222,65 €“ mit Balken, darunter der eingetippte Betrag 4,20 €, Felder für Kategorie und Bezeichnung, Ziffernfeld und der grüne Knopf Speichern."],
+            ["de-start.webp", "Startbildschirm des Einfachen Haushaltsbuchs: oben groß „Verfügbar 1.222,65 €“ mit Balken, darunter der eingetippte Betrag 4,20 €, Felder für Kategorie und Bezeichnung, Ziffernfeld und der grüne Knopf Speichern."],
             ["de-kassenzettel.webp", "Die Kamera liest einen Kassenzettel; die Summenzeile „SUMME EUR 22,42“ ist grün markiert."],
             ["de-verlauf.webp", "Verlauf im dunklen Modus: Ausgaben nach Tagen mit Bezeichnung, Kategorie und Betrag."],
             ["de-auswertung.webp", "Auswertung: Ausgegeben 380,55 €, Übrig 1.218,45 €, Pro Tag 31,71 € im Schnitt, darunter ein Tagesdiagramm und die Zusammensetzung aus Einnahmen und Fixkosten."],
@@ -73,6 +77,18 @@ C = {
                       "Keine Dashboards, keine zwölf Diagramme. Was übrig bleibt, kann auf Wunsch in den nächsten Monat wandern."],
              "shot": "de-auswertung.webp"},
         ],
+        "simple": {
+            "kicker": "Das Prinzip",
+            "h2": "Das Ziel: das einfachste Haushaltsbuch, das es gibt",
+            "lead": "Daran wird jede neue Funktion gemessen: Bleibt das Eintragen so schnell wie vorher? Wenn nicht, kommt sie nicht in die App.",
+            "points": [
+                "**Ein Pflichtfeld pro Ausgabe.** Der Betrag – alles andere ist freiwillig.",
+                "**Eine Zahl statt Dashboard.** Der Startbildschirm zeigt, was diesen Monat noch verfügbar ist – die Fixkosten sind schon abgezogen.",
+                "**Seltenes kommt später.** Datum und Notiz fragt die App beim Eintragen gar nicht ab – du ergänzt sie bei Bedarf am Eintrag.",
+                "**Nichts zu verwalten.** Kein Konto, kein Passwort, keine Bankverbindung, kein Abo.",
+            ],
+            "more": "Die Methode dahinter, auch ohne App: [Einfaches Haushaltsbuch führen](/anleitungen/einfaches-haushaltsbuch-fuehren/).",
+        },
         "nots_h2": "Deine Zahlen bleiben auf deinem Telefon",
         "nots_lead": "Alles, was du einträgst, liegt nur auf deinem Gerät. Es gibt keinen Server, auf dem deine Finanzen landen könnten.",
         "nots": [
@@ -96,8 +112,8 @@ C = {
              ["Nein. Weil es keine Cloud und keinen Server gibt, synchronisiert die App nichts zwischen Geräten. Das ist der Preis dafür, dass deine Zahlen dein Telefon nie verlassen."]],
             ["Was passiert mit dem Geld, das am Monatsende übrig ist?",
              ["Das entscheidest du in den Einstellungen: Mit „Plus mitnehmen“ wandert der Rest in den nächsten Monat, mit „Minus mitnehmen“ wird ein Fehlbetrag im nächsten Monat abgezogen. Beides lässt sich getrennt ein- und ausschalten. Mehr dazu: [Geld übrig am Monatsende](/anleitungen/rest-am-monatsende/)."]],
-            ["Wann erscheint die App?",
-             ["Die App ist im letzten geschlossenen Test und erscheint in Kürze bei Google Play für Android."]],
+            ["Gibt es das Einfache Haushaltsbuch auch fürs iPhone?",
+             ["Nein. Das Einfache Haushaltsbuch von Nice Developments gibt es nur für Android, bei Google Play."]],
         ],
         "final_h2": "Wissen, was übrig ist. Ohne Aufwand.",
         "final_body": "Eine Zahl, ein Balken, zwei Tipps pro Ausgabe. Für Android.",
@@ -113,6 +129,72 @@ C = {
 
     # ------------------------------------------------------------ Anleitungen
     "guides": [
+        {
+            "id": "simple",
+            "slug": "einfaches-haushaltsbuch-fuehren",
+            "title": "Einfaches Haushaltsbuch führen: so geht's ohne Excel und Kategorien",
+            "desc": "Ein einfaches Haushaltsbuch braucht nur drei Zahlen: Einkommen, Fixkosten, Ausgaben. So führst du es mit Heft, Notiz-App oder App – ohne Tabelle.",
+            "h1": "Einfaches Haushaltsbuch führen – so geht's ohne Excel",
+            "teaser": "Drei Zahlen, keine Kategorien: die kleinste Form, die trotzdem funktioniert.",
+            "answer": "**Ein einfaches Haushaltsbuch hat nur drei Teile: Einkommen, Fixkosten und die Ausgaben des Alltags.** Zieh die Fixkosten einmal im Monat vom Einkommen ab und schreib danach jede Ausgabe auf – der Betrag genügt. Was übrig bleibt, kannst du noch ausgeben. Eine Tabelle oder Kategorien brauchst du dafür nicht.",
+            "updated": "2026-11-23",
+            "updated_label": "November 2026",
+            "sections": [
+                ["drei-zahlen", "Die drei Zahlen, die du brauchst", [
+                    {"steps": [
+                        "**Einkommen.** Was im Monat netto ankommt: Lohn oder Gehalt, dazu feste Einnahmen wie Kindergeld.",
+                        "**Fixkosten.** Was jeden Monat sicher abgeht: Miete, Strom, Versicherungen, Handy, Abos. Damit du keinen Posten vergisst: [Fixkosten-Liste](/anleitungen/fixkosten-liste/).",
+                        "**Ausgaben.** Alles andere – Einkauf, Tanken, Essen gehen, Geschenke. Jede einzeln, sobald sie anfällt.",
+                    ]},
+                    {"calc": [["Netto-Einkommen", "1.900,00 €"], ["− Fixkosten", "1.080,00 €"], ["= frei für den Monat", "820,00 €"],
+                              ["− Ausgaben bis heute", "312,40 €"], ["**Noch verfügbar**", "507,60 €"]],
+                     "caption": "Beispiel mit erfundenen Zahlen"},
+                    "Die letzte Zahl ist der ganze Zweck des Haushaltsbuchs: Sie sagt dir jeden Tag, wie viel noch da ist.",
+                ]],
+                ["nur-betraege", "Die einfachste Form: nur Beträge", [
+                    "Viele Haushaltsbücher scheitern nicht am Rechnen, sondern an den Spalten. Wer bei jedem Kaffee überlegen muss, ob er unter „Freizeit“ oder „Essen“ gehört, hört bald wieder auf.",
+                    "Die kleinste Form, die trotzdem funktioniert: **Du schreibst nur den Betrag auf.** Ohne Kategorie, ohne Bezeichnung. Für die Frage „Wie viel ist noch da?“ reicht das vollständig.",
+                    {"note": "Kategorien lohnen sich erst, wenn du eine bestimmte Frage hast – etwa: Wie viel gebe ich fürs Essengehen aus? Dann führst du genau diese eine Kategorie ein, nicht zwölf auf einmal."},
+                ]],
+                ["womit", "Heft, Notiz-App, Excel oder App?", [
+                    {"table": [
+                        ["Womit", "Gut daran", "Der Haken"],
+                        ["Heft oder Notizbuch", "kein Gerät nötig, sofort startklar", "du rechnest von Hand, und das Heft ist nicht immer dabei"],
+                        ["Notiz-App am Handy", "immer dabei, kostenlos", "keine Summe – du addierst selbst"],
+                        ["Excel oder Vorlage", "flexibel, viele Vorlagen", "am Handy umständlich, also trägt man abends nach – oder gar nicht"],
+                        ["Haushaltsbuch-App", "rechnet selbst, immer dabei", "manche verlangen Konto oder Bankzugang – vorher prüfen: [App ohne Bankverbindung](/anleitungen/haushaltsbuch-app-ohne-bankverbindung/)"],
+                    ]},
+                    "Nimm das Werkzeug, das du **beim Bezahlen** ohnehin in der Hand hast. Wer abends aus dem Gedächtnis nachträgt, vergisst fast immer etwas.",
+                ]],
+                ["einfach-bleiben", "Damit es einfach bleibt", [
+                    {"list": [
+                        "**Bargeld genauso wie Karte.** Gerade die kleinen Barbeträge fehlen sonst am Monatsende.",
+                        "**Nicht perfekt sein wollen.** Ein vergessener Kaffee macht das Haushaltsbuch nicht wertlos. Einmal im Monat mit dem Kontostand vergleichen reicht, um Lücken zu finden.",
+                        "**Am Monatsende kurz hinsehen**, nicht stundenlang auswerten: Hat es gereicht? Was mit dem Rest passiert: [Geld übrig am Monatsende](/anleitungen/rest-am-monatsende/).",
+                    ]},
+                    "Mehr dazu, wie man dranbleibt: [Haushaltsbuch führen und durchhalten](/anleitungen/haushaltsbuch-fuehren-tipps/).",
+                ]],
+            ],
+            "app": {
+                "h2": "So geht es im Einfachen Haushaltsbuch",
+                "body": [
+                    "Die App arbeitet nach dieser Methode. Einkommen und Fixkosten trägst du einmal bei der Einrichtung ein. Danach heißt eine Ausgabe: **Betrag eintippen, Speichern antippen.** Die große Zahl auf dem Startbildschirm ist das, was noch verfügbar ist.",
+                    "Kategorie und Bezeichnung sind freiwillig. Kassenzettel hältst du vor die Kamera, statt sie abzutippen. Kein Konto, keine Bankverbindung – alles bleibt auf dem Telefon.",
+                ],
+                "shot": "de-start.webp",
+                "alt": "Einfaches Haushaltsbuch: Startbildschirm mit Verfügbar 1.222,65 €, Ziffernfeld und dem Knopf Speichern.",
+            },
+            "faq": [
+                ["Was ist das einfachste Haushaltsbuch?",
+                 ["Das, das du wirklich führst. Für die meisten heißt das: so wenig Pflichtfelder wie möglich. Der Betrag reicht; Einkommen und Fixkosten rechnest du einmal im Monat. Ob im Heft, in einer Notiz-App oder in einer Haushaltsbuch-App, ist zweitrangig."]],
+                ["Brauche ich Kategorien?",
+                 ["Nein. Für die Frage, wie viel noch da ist, reicht der Betrag. Kategorien helfen erst, wenn du gezielt wissen willst, wofür das Geld weggeht."]],
+                ["Reicht es nicht, einmal im Monat den Kontoauszug durchzugehen?",
+                 ["Für einen Rückblick ja. Nur erfährst du dann erst am Monatsende, dass es knapp wurde. Wer jede Ausgabe gleich einträgt, sieht schon am 15., wie viel noch da ist."]],
+                ["Muss ich auch Kartenzahlungen eintragen?",
+                 ["Ja, alles, was nicht zu den Fixkosten gehört – egal ob bar, mit Karte oder per Handy bezahlt. Sonst stimmt die Zahl „noch verfügbar“ nicht."]],
+            ],
+        },
         {
             "id": "daily",
             "slug": "wie-viel-darf-ich-pro-tag-ausgeben",
