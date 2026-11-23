@@ -24,7 +24,8 @@ impressum/, imprint/             Impressum DE / EN                        (Hand,
 404.html                                                                  (Hand, noindex)
 css/site.css                     einziges Stylesheet, Palette aus ui/theme/Theme.kt
 fonts/                           TeX Gyre Heros als woff2-Teilmenge (GUST-Lizenz liegt bei)
-img/                             Bildschirmfotos aus store/build/roh (Demo-Daten), *-dark für den Dunkelmodus
+img/                             Handy-Mockups (transparent, 900 × 1500) aus ../store/web_mockups.py, *-dark für den Dunkelmodus
+js/site.js                       dezente Bewegung (Hereingleiten, Pille im Hero, Zähler); aus bei prefers-reduced-motion
 ```
 
 **Datenschutz und Impressum bleiben noindex** – Name und Anschrift sollen nicht in

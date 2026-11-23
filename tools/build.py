@@ -112,6 +112,8 @@ def head(code: str, path: str, title: str, desc: str, alts: dict[str, str], extr
 <link rel="apple-touch-icon" href="{href('/img/icon-180.png')}">
 <link rel="preload" href="{href('/fonts/heros-regular.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{href('/css/site.css')}?v={STAMP}">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("anim")</script>
+<script src="{href('/js/site.js')}?v={STAMP}" defer onerror="document.documentElement.classList.remove('anim')"></script>
 {extra}</head>
 <body>
 <a class="skip" href="#main">{e(C[code]['ui']['skip'])}</a>"""
@@ -160,16 +162,26 @@ def play_badge(code: str) -> str:
     return f'<p class="soon"><span class="dot" aria-hidden="true"></span>{e(u["play_soon"])}</p>'
 
 
-def phone(src: str, alt: str, *, eager: bool = False, w: int = 270) -> str:
-    """Bildschirmfoto; gibt es img/<name>-dark.webp, zeigt der Dunkelmodus das dunkle Foto."""
+MOCKUP_RATIO = (3, 5)  # Breite : Hoehe der Bilder aus store/web_mockups.py (Handy-Mockup, transparent)
+
+
+TOAST = {"de": ("4,20 € gespeichert", "Rückgängig"), "en": ("€4.20 saved", "Undo")}  # wie AppSnackbarHost
+
+
+def phone(src: str, alt: str, *, eager: bool = False, w: int = 420, toast_code: str = "") -> str:
+    """Handy-Mockup (store/web_mockups.py); gibt es img/<name>-dark.webp, zeigt der Dunkelmodus das dunkle Bild."""
     load = 'fetchpriority="high"' if eager else 'loading="lazy"'
-    img = (f'<img src="{href("/img/" + src)}" width="{w}" height="{w * 1200 // 540}" '
+    img = (f'<img src="{href("/img/" + src)}" width="{w}" height="{w * MOCKUP_RATIO[1] // MOCKUP_RATIO[0]}" '
            f'alt="{e(alt)}" decoding="async" {load}>')
+    toast = ""
+    if toast_code:  # nur im Hero: die Bestaetigung nach dem Speichern, rein dekorativ (nur mit Animation sichtbar)
+        a, b = TOAST[toast_code]
+        toast = f'<span class="toast" aria-hidden="true">{e(a)}<b>{e(b)}</b></span>'
     dark = src.replace(".webp", "-dark.webp")
     if (ROOT / "img" / dark).exists():
         img = (f'<picture><source srcset="{href("/img/" + dark)}" media="(prefers-color-scheme: dark)">'
                f'{img}</picture>')
-    return f'<figure class="phone">{img}</figure>'
+    return f'<figure class="phone">{img}{toast}</figure>'
 
 
 def meter(code: str) -> str:
@@ -227,7 +239,7 @@ def home(code: str) -> str:
     feats = "".join(
         f"""<section class="feature{' flip' if i % 2 else ''}"><div class="wrap wide feature__grid">
       <div class="feature__text"><p class="kicker">{e(f['kicker'])}</p><h2>{e(f['h2'])}</h2>{''.join(f'<p>{inline(p)}</p>' for p in f['body'])}</div>
-      <div class="feature__shot">{meter(code) if f['shot'] == 'meter' else phone(f['shot'], shots[f['shot']], w=240)}</div>
+      <div class="feature__shot">{meter(code) if f['shot'] == 'meter' else phone(f['shot'], shots[f['shot']], w=340)}</div>
     </div></section>"""
         for i, f in enumerate(h["features"]))
     nots = "".join(f"<li>{inline(x)}</li>" for x in h["nots"])
@@ -245,7 +257,7 @@ def home(code: str) -> str:
       <p class="lead">{inline(h['lead'])}</p>
       {play_badge(code)}
     </div>
-    <div class="hero__shot">{phone(h['hero_shot'], shots[h['hero_shot']], eager=True, w=300)}</div>
+    <div class="hero__shot">{phone(h['hero_shot'], shots[h['hero_shot']], eager=True, w=400, toast_code=code)}</div>
   </div></section>
 
   {feats}

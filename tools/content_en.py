@@ -45,7 +45,7 @@ C = {
         "hero_shot": "en-home.webp",
         "shots": [
             ["en-home.webp", "Home screen: “Available €1,222.65” in large type with a bar, below it the amount €4.20 typed in, fields for category and description, a number pad and the green Save button."],
-            ["de-kassenzettel.webp", "The camera reads a receipt; the total line “SUMME EUR 22,42” is highlighted in green."],
+            ["en-receipt.webp", "The camera reads a receipt; the total line “TOTAL EUR 22.42” is highlighted in green."],
             ["en-history.webp", "History in dark mode: expenses by day with description, category and amount."],
             ["en-summary.webp", "Analysis: Spent €380.55, Left €1,218.45, Per day €31.71 on average, a daily chart and the breakdown into income and fixed costs."],
         ],
@@ -57,7 +57,7 @@ C = {
             {"kicker": "Receipts", "h2": "Hold it up to the camera instead of typing",
              "body": ["Tap the camera icon and hold the receipt in view. The app reads the total, the shop, date and time and fills them in.",
                       "Text recognition runs on your phone. The image is neither stored nor sent anywhere."],
-             "shot": "de-kassenzettel.webp"},
+             "shot": "en-receipt.webp"},
             {"kicker": "Fixed costs", "h2": "Enter them once, then forget them",
              "body": ["Rent, electricity, insurance, subscriptions: during setup the app asks for one item at a time – leave it empty if you don't have it. Yearly costs such as liability insurance get a due date.",
                       "From then on the app deducts your fixed costs every month by itself. The large number on the home screen is what you really have left."],
