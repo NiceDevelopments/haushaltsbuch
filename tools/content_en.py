@@ -25,6 +25,7 @@ C = {
         "updated": "Updated:",
         "with_app": "With the app",
         "more_guides": "More guides",
+        "all_guides": "See all guides",
         "play_soon": "Coming soon to Google Play – the app is in its final test.",
         "play_cta": "Get it on Google Play",
         "app_more": "Simple Household Budget – the app at a glance",
@@ -112,8 +113,8 @@ C = {
     },
 
     "guides_index": {
-        "title": "Budget guides: daily budget, fixed costs, yearly bills",
-        "desc": "Budgeting guides: how much you can spend per day, a fixed expenses checklist, yearly bills in a monthly budget, budgeting from payday – with examples.",
+        "title": "Budget guides: daily budget, 50/30/20 rule, saving and more",
+        "desc": "Budgeting guides: daily budget, fixed expenses, the 50/30/20 rule, emergency fund, budgeting on a low income, kakeibo – with worked examples.",
         "h1": "Guides",
         "lead": "Short, practical answers to the questions that actually come up when you keep a budget. Each one works with pen and paper – the app just makes it faster.",
         "app": "**Simple Household Budget** does the maths for you: enter fixed costs once, then one large number shows what's left this month.",
@@ -137,7 +138,7 @@ C = {
                         "**Fixed costs.** What goes out every month for sure: rent, utilities, insurance, phone, subscriptions. So you don't miss anything: [fixed expenses list](/en/guides/fixed-expenses-list/).",
                         "**Spending.** Everything else – groceries, fuel, eating out, gifts. Each one on its own, as soon as it happens.",
                     ]},
-                    {"calc": [["Take-home pay", "€1,900.00"], ["− Fixed costs", "€1,080.00"], ["= Free for the month", "€820.00"],
+                    {"calc": [["Take-home pay", "€1,900.00"], ["− Fixed costs", "€1,080.00"], ["= Left for the month", "€820.00"],
                               ["− Spent so far", "€312.40"], ["**Still available**", "€507.60"]],
                      "caption": "Example with made-up numbers"},
                     "That last number is the whole point of a budget: it tells you every day how much is left.",
@@ -205,7 +206,7 @@ C = {
                     ]},
                     {"formula": "Daily budget = (income − fixed costs − savings) ÷ days in the month"},
                     {"calc": [["Take-home pay", "€2,100.00"], ["− Fixed costs", "€1,150.00"], ["− Savings", "€100.00"],
-                              ["= Free for the month", "€850.00"], ["÷ 30 days", ""], ["**Daily budget**", "€28.33"]],
+                              ["= Left for the month", "€850.00"], ["÷ 30 days", ""], ["**Daily budget**", "€28.33"]],
                      "caption": "Example with made-up numbers"},
                     "That €850 is your money for everything that varies: groceries, toiletries, eating out, clothes, gifts, small repairs.",
                 ]],
@@ -224,7 +225,7 @@ C = {
                     "Compare two percentages:",
                     {"list": [
                         "**How much of the month has passed?** On the 12th of a 30-day month, 40%.",
-                        "**How much of your free money is spent?** €340 of €850 is 40%.",
+                        "**How much of your spending money is gone?** €340 of €850 is 40%.",
                     ]},
                     {"table": [
                         ["Spent compared with the month", "Meaning"],

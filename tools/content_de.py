@@ -32,6 +32,7 @@ C = {
         "updated": "Stand:",
         "with_app": "Mit der App",
         "more_guides": "Weitere Anleitungen",
+        "all_guides": "Alle Anleitungen ansehen",
         "play_soon": "Bald bei Google Play – die App ist im letzten Test.",
         "play_cta": "Bei Google Play laden",
         "app_more": "Einfaches Haushaltsbuch – die App im Überblick",
@@ -121,7 +122,7 @@ C = {
 
     "guides_index": {
         "title": "Anleitungen: Monatsbudget, Fixkosten, Tagesbudget – Einfaches Haushaltsbuch",
-        "desc": "Anleitungen fürs Haushaltsbuch: Tagesbudget berechnen, Fixkosten-Liste, jährliche Kosten einplanen, Budget ab Gehaltseingang – mit Rechenbeispielen.",
+        "desc": "Anleitungen fürs Haushaltsbuch: Tagesbudget, Fixkosten, 50/30/20-Regel, Notgroschen, Sparen mit wenig Einkommen, Kakeibo – mit Rechenbeispielen.",
         "h1": "Anleitungen",
         "lead": "Kurze, praktische Antworten auf die Fragen, die beim Haushaltsbuch wirklich auftauchen. Jede Anleitung funktioniert auch mit Stift und Papier – die App macht es nur schneller.",
         "app": "Das **Einfache Haushaltsbuch** rechnet all das für dich: Fixkosten einmal eintragen, dann zeigt eine große Zahl, was in diesem Monat noch übrig ist.",
@@ -318,8 +319,8 @@ C = {
                 ]],
                 ["rest", "Was nach den Fixkosten übrig bleibt", [
                     {"calc": [["Netto-Einkommen", "2.100,00 €"], ["− Miete und Nebenkosten", "780,00 €"], ["− Strom, Internet, Handy", "105,00 €"],
-                              ["− Versicherungen", "65,00 €"], ["− Abos und Verein", "40,00 €"], ["− ÖPNV-Abo", "58,00 €"], ["− Sparrate", "100,00 €"],
-                              ["**Bleibt zum Ausgeben**", "952,00 €"]],
+                              ["− Versicherungen", "65,00 €"], ["− Abos und Verein", "40,00 €"], ["− Deutschlandticket", "63,00 €"], ["− Sparrate", "100,00 €"],
+                              ["**Bleibt zum Ausgeben**", "947,00 €"]],
                      "caption": "Beispiel mit erfundenen Zahlen"},
                     "Diese Zahl ist die wichtigste in deinem Haushaltsbuch. Teilst du sie durch die Tage des Monats, hast du dein [Tagesbudget](/anleitungen/wie-viel-darf-ich-pro-tag-ausgeben/).",
                     "Sind die Fixkosten so hoch, dass kaum etwas bleibt, lohnt der Blick auf Abos und Verträge zuerst – sie lassen sich am leichtesten kündigen oder wechseln.",

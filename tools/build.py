@@ -36,6 +36,14 @@ PLAY_HL = {"de": "de", "en": "en"}
 
 LOCALES = ["de", "en"]
 C = {code: importlib.import_module(f"content_{code}").C for code in LOCALES}
+# Zusatz-Anleitungen (ab 24.11.2026) stehen in tools/guides_<sprache>_2.py, Liste GUIDES.
+for _code in LOCALES:
+    try:
+        C[_code]["guides"] = C[_code]["guides"] + importlib.import_module(f"guides_{_code}_2").GUIDES
+    except ModuleNotFoundError:
+        pass
+HOME_GUIDES = 8  # so viele Kacheln auf der Startseite, der Rest steht in der Uebersicht
+RELATED = 6      # so viele Links unter "Weitere Anleitungen"
 # Rechtsseiten (handgeschrieben)
 LEGAL = {
     "de": {"privacy": "/datenschutz/", "imprint": "/impressum/"},
@@ -72,10 +80,11 @@ def guide_by_id(code: str, gid: str) -> dict | None:
 # ---------------------------------------------------------------- Bausteine
 
 def inline(s: str) -> str:
-    """Text mit **fett**, *betont* und [Text](/pfad/) (interne Pfade ohne /haushaltsbuch)."""
+    """Text mit **fett**, *betont*, [Text](/pfad/) (intern, ohne /haushaltsbuch) und [Quelle](https://…)."""
     s = e(s, quote=False)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<![*\w])\*(?=\S)([^*\n]+?)(?<=\S)\*(?![*\w])", r"<em>\1</em>", s)
+    s = re.sub(r"\[([^\]]+)\]\((https://[^)\s]+)\)", lambda m: f'<a href="{m.group(2)}" rel="noopener">{m.group(1)}</a>', s)
     return re.sub(r"\[([^\]]+)\]\((/[^)\s]*)\)", lambda m: f'<a href="{BASE}{m.group(2)}">{m.group(1)}</a>', s)
 
 
@@ -246,7 +255,7 @@ def home(code: str) -> str:
     nots = "".join(f"<li>{inline(x)}</li>" for x in h["nots"])
     guide_cards = "".join(
         f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
-        for g in c["guides"])
+        for g in c["guides"][:HOME_GUIDES])
     graph = {"@context": "https://schema.org", "@graph": [app_ld(code), {
         "@type": "WebSite", "name": c["app_name"], "alternateName": h["alt_names"],
         "url": abs_url(home_path(code)), "inLanguage": code}]}
@@ -285,6 +294,7 @@ def home(code: str) -> str:
     <h2>{e(h['guides_h2'])}</h2>
     <p class="lead">{e(h['guides_lead'])}</p>
     <ul class="tiles cols">{guide_cards}</ul>
+    <p><a href="{href(guides_path(code))}">{e(u['all_guides'])}</a></p>
   </div></section>
 
   <section><div class="wrap">
@@ -337,6 +347,19 @@ def guide_alts(gid: str) -> dict[str, str]:
     return {c: guide_path(c, g) for c in LOCALES if (g := guide_by_id(c, gid))}
 
 
+def related(code: str, g: dict) -> list[dict]:
+    """Erst die in g["related"] genannten, dann die folgenden Anleitungen der Liste (ringsum)."""
+    alle = C[code]["guides"]
+    out = [x for rid in g.get("related", []) if (x := guide_by_id(code, rid))]
+    i = alle.index(g)
+    for x in alle[i + 1:] + alle[:i]:
+        if len(out) >= RELATED:
+            break
+        if x not in out:
+            out.append(x)
+    return out[:RELATED]
+
+
 def guide_page(code: str, g: dict) -> str:
     c = C[code]
     u = c["ui"]
@@ -354,7 +377,7 @@ def guide_page(code: str, g: dict) -> str:
                 + (f'<div class="app-box__shot">{phone(app["shot"], app["alt"])}</div>' if app.get("shot") else "")
                 + "</section>")
     others = "".join(f'<li><a href="{href(guide_path(code, o))}">{e(o["h1"])}</a></li>'
-                     for o in c["guides"] if o["id"] != g["id"])
+                     for o in related(code, g)) + f'<li><a href="{href(guides_path(code))}">{e(u["all_guides"])}</a></li>'
     crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": c["app_name"], "item": abs_url(home_path(code))},
         {"@type": "ListItem", "position": 2, "name": u["guides"], "item": abs_url(guides_path(code))},

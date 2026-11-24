@@ -43,6 +43,9 @@ Suchmaschinen erscheinen. Die Anschrift steht nur hinter einem Ausklapper.
 - Markenname = Suchbegriff: Title und H1 der Startseiten tragen „Einfaches Haushaltsbuch“ / „Simple Household Budget“.
   Achtung: Bei Google Play gibt es eine fremde App mit demselben deutschen Namen (wscellbox) und eine „Simple Household Budget App“
   (gamelab) – deshalb Herausgeber Nice Developments im JSON-LD.
+- Zusatz-Anleitungen (seit 24.11.2026, 15 Themen) stehen in `tools/guides_de_2.py` / `guides_en_2.py`; die Startseite zeigt nur die ersten 8
+  Kacheln, „Weitere Anleitungen“ 6 (erst `related`, dann die folgenden). Fixkosten-Änderungen wirken in der App erst ab dem
+  nächsten Zeitraum – in App-Kästen nie „sofort“ schreiben. Externe Quellen als `[Text](https://…)` erlaubt.
 - Neue Anleitung: in beiden `content_*.py` mit derselben `id` anlegen, dann bauen – hreflang,
   Sitemap, Übersicht und „Weitere Anleitungen“ ergeben sich von selbst.
 
