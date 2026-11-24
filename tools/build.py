@@ -42,6 +42,20 @@ for _code in LOCALES:
         C[_code]["guides"] = C[_code]["guides"] + importlib.import_module(f"guides_{_code}_2").GUIDES
     except ModuleNotFoundError:
         pass
+import bereiche as BR  # noqa: E402  Bereiche der Anleitungen (24.11.2026)
+for _code in LOCALES:
+    _ohne = [g["id"] for g in C[_code]["guides"] if g["id"] not in BR.HUB_OF]
+    if _ohne:
+        raise SystemExit(f"Anleitung ohne Bereich in tools/bereiche.py: {_ohne}")
+    _ids = [gid for hb in BR.ORDER for gid in BR.OF[hb]]
+    _doppelt = sorted({gid for gid in _ids if _ids.count(gid) > 1})
+    if _doppelt or set(BR.OF) != set(BR.ORDER):
+        raise SystemExit(f"tools/bereiche.py: id in mehreren Bereichen {_doppelt} oder ORDER passt nicht zu OF")
+    # Bereichs-Slugs liegen im selben Ordner wie die Anleitungen: keine doppelten Namen.
+    _slugs = [g["slug"] for g in C[_code]["guides"]] + [BR.TEXT[_code][hb]["slug"] for hb in BR.ORDER]
+    _kollision = sorted({x for x in _slugs if _slugs.count(x) > 1})
+    if _kollision:
+        raise SystemExit(f"Slug doppelt (Anleitung/Bereich, {_code}): {_kollision}")
 HOME_GUIDES = 8  # so viele Kacheln auf der Startseite, der Rest steht in der Uebersicht
 RELATED = 6      # so viele Links unter "Weitere Anleitungen"
 # Rechtsseiten (handgeschrieben)
@@ -71,6 +85,15 @@ def abs_url(path: str) -> str:
 
 def href(path: str) -> str:
     return BASE + path
+
+
+def hub_path(code: str, hub: str) -> str:
+    return guides_path(code) + BR.TEXT[code][hub]["slug"] + "/"
+
+
+def hub_guides(code: str, hub: str) -> list[dict]:
+    """Anleitungen eines Bereichs in der Reihenfolge aus bereiche.OF (nicht in Schreibreihenfolge)."""
+    return [g for gid in BR.OF[hub] if (g := guide_by_id(code, gid))]
 
 
 def guide_by_id(code: str, gid: str) -> dict | None:
@@ -352,7 +375,8 @@ def related(code: str, g: dict) -> list[dict]:
     alle = C[code]["guides"]
     out = [x for rid in g.get("related", []) if (x := guide_by_id(code, rid))]
     i = alle.index(g)
-    for x in alle[i + 1:] + alle[:i]:
+    gleich = [x for x in alle[i + 1:] + alle[:i] if BR.HUB_OF[x["id"]] == BR.HUB_OF[g["id"]]]
+    for x in gleich + alle[i + 1:] + alle[:i]:
         if len(out) >= RELATED:
             break
         if x not in out:
@@ -378,10 +402,13 @@ def guide_page(code: str, g: dict) -> str:
                 + "</section>")
     others = "".join(f'<li><a href="{href(guide_path(code, o))}">{e(o["h1"])}</a></li>'
                      for o in related(code, g)) + f'<li><a href="{href(guides_path(code))}">{e(u["all_guides"])}</a></li>'
+    hub = BR.HUB_OF[g["id"]]
+    ht = BR.TEXT[code][hub]
     crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": c["app_name"], "item": abs_url(home_path(code))},
         {"@type": "ListItem", "position": 2, "name": u["guides"], "item": abs_url(guides_path(code))},
-        {"@type": "ListItem", "position": 3, "name": g["h1"], "item": abs_url(path)}]})
+        {"@type": "ListItem", "position": 3, "name": ht["name"], "item": abs_url(hub_path(code, hub))},
+        {"@type": "ListItem", "position": 4, "name": g["h1"], "item": abs_url(path)}]})
     article = ld({"@context": "https://schema.org", "@type": "Article", "headline": g["h1"],
                   "description": g["desc"], "inLanguage": code, "dateModified": g["updated"],
                   "datePublished": g["updated"], "url": abs_url(path), "mainEntityOfPage": abs_url(path),
@@ -393,7 +420,7 @@ def guide_page(code: str, g: dict) -> str:
 <main id="main">
   <article class="guide">
     <div class="wrap">
-      <nav class="crumbs" aria-label="{e(u['crumbs'])}"><a href="{href(home_path(code))}">{e(c['app_name'])}</a> / <a href="{href(guides_path(code))}">{e(u['guides'])}</a></nav>
+      <nav class="crumbs" aria-label="{e(u['crumbs'])}"><a href="{href(home_path(code))}">{e(c['app_name'])}</a> / <a href="{href(guides_path(code))}">{e(u['guides'])}</a> / <a href="{href(hub_path(code, hub))}">{e(ht['name'])}</a></nav>
       <h1>{e(g['h1'])}</h1>
       <p class="lead answer">{inline(g['answer'])}</p>
       <p class="stand">{e(u['updated'])} {e(g['updated_label'])}</p>
@@ -417,23 +444,59 @@ def guides_index(code: str) -> str:
     u = c["ui"]
     gi = c["guides_index"]
     alts = {x: guides_path(x) for x in LOCALES}
-    cards = "".join(
-        f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
-        for g in c["guides"])
+    card = lambda g: f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
+    cards_html = "".join(
+        f'<h2 class="hub-h"><a href="{href(hub_path(code, hb))}">{e(BR.TEXT[code][hb]["name"])}</a></h2>'
+        f'<ul class="tiles cols">{"".join(card(g) for g in hub_guides(code, hb))}</ul>'
+        for hb in BR.ORDER)
     items = ld({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": abs_url(guide_path(code, g)), "name": g["h1"]}
-        for i, g in enumerate(c["guides"])]})
+        for i, g in enumerate(g for hb in BR.ORDER for g in hub_guides(code, hb))]})
     body = f"""{header(code, alts, 'guides')}
 <main id="main">
   <div class="wrap">
     <h1>{e(gi['h1'])}</h1>
     <p class="lead">{e(gi['lead'])}</p>
-    <ul class="tiles">{cards}</ul>
+    {cards_html}
     <div class="app-box slim"><div class="app-box__text"><p class="kicker">{e(u['with_app'])}</p><p>{inline(gi['app'])}</p>{play_badge(code)}</div></div>
   </div>
 </main>
 {footer(code)}"""
     return head(code, guides_path(code), gi["title"], gi["desc"], alts, extra=items) + body
+
+
+def hub_page(code: str, hub: str) -> str:
+    c = C[code]
+    u = c["ui"]
+    t = BR.TEXT[code][hub]
+    path = hub_path(code, hub)
+    alts = {x: hub_path(x, hub) for x in LOCALES}
+    gs = hub_guides(code, hub)
+    cards = "".join(f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
+                    for g in gs)
+    others = "".join(f'<li><a href="{href(hub_path(code, hb))}">{e(BR.TEXT[code][hb]["name"])}</a></li>'
+                     for hb in BR.ORDER if hb != hub) + f'<li><a href="{href(guides_path(code))}">{e(u["all_guides"])}</a></li>'
+    extra = ld({"@context": "https://schema.org", "@type": "CollectionPage", "name": t["h1"], "description": t["desc"],
+                "url": abs_url(path), "inLanguage": code,
+                "hasPart": [{"@type": "Article", "headline": g["h1"], "url": abs_url(guide_path(code, g))} for g in gs]})
+    extra += ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": c["app_name"], "item": abs_url(home_path(code))},
+        {"@type": "ListItem", "position": 2, "name": u["guides"], "item": abs_url(guides_path(code))},
+        {"@type": "ListItem", "position": 3, "name": t["name"], "item": abs_url(path)}]})
+    intro = "".join(f'<p{" class=\"lead\"" if i == 0 else ""}>{inline(x)}</p>' for i, x in enumerate(t["intro"]))
+    body = f"""{header(code, alts, 'guides')}
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="{e(u['crumbs'])}"><a href="{href(home_path(code))}">{e(c['app_name'])}</a> / <a href="{href(guides_path(code))}">{e(u['guides'])}</a></nav>
+    <h1>{e(t['h1'])}</h1>
+    {intro}
+    <ul class="tiles cols">{cards}</ul>
+    <h2>{e(BR.TEXT[code]['others_h'])}</h2>
+    <ul class="related">{others}</ul>
+  </div>
+</main>
+{footer(code)}"""
+    return head(code, path, t["title"], t["desc"], alts, extra=extra) + body
 
 
 # ---------------------------------------------------------------- Schreiben
@@ -477,6 +540,9 @@ def main() -> None:
         for g in C[code]["guides"]:
             write(guide_path(code, g), trennen(code, guide_page(code, g)))
             pages.append((guide_path(code, g), guide_alts(g["id"])))
+        for hb in BR.ORDER:
+            write(hub_path(code, hb), trennen(code, hub_page(code, hb)))
+            pages.append((hub_path(code, hb), {x: hub_path(x, hb) for x in LOCALES}))
 
     urls = []
     for path, alts in pages:

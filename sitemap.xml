@@ -151,6 +151,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-should-i-save/"/>
   </url>
   <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/budget-methoden/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/budget-methoden/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budgeting-methods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budgeting-methods/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-geld-fuer/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-geld-fuer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-to-spend/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-to-spend/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/kosten-im-griff/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/kosten-im-griff/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/"/>
+  </url>
+  <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/en/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
@@ -299,5 +323,29 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-sollte-man-sparen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-should-i-save/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-should-i-save/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/budgeting-methods/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/budget-methoden/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budgeting-methods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budgeting-methods/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-to-spend/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-geld-fuer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-to-spend/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-to-spend/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/kosten-im-griff/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/"/>
   </url>
 </urlset>

@@ -307,3 +307,8 @@ footer.site .foot { display: grid; gap: .2rem; }
 footer.site strong { color: var(--ink); }
 footer.site .fine { font-size: .8rem; margin-top: .4rem; }
 .feature__shot .meter { width: 100%; margin: 0; }
+
+/* Bereiche der Anleitungen (24.11.2026) */
+.hub-h { margin-top: 2.25rem; }
+.hub-h a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.hub-h a:hover { text-decoration: underline; }
