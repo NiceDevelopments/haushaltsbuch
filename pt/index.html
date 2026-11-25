@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controle de gastos do mês – app simples para Android, sem banco</title>
+<meta name="description" content="App de controle de gastos mensal para Android: digite o valor e salve. Mostra o que sobra depois dos custos fixos – sem conta, sem banco, tudo no celular.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nicedevelopments.github.io/haushaltsbuch/pt/">
+<link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/">
+<link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/">
+<link rel="alternate" hreflang="es" href="https://nicedevelopments.github.io/haushaltsbuch/es/">
+<link rel="alternate" hreflang="pt" href="https://nicedevelopments.github.io/haushaltsbuch/pt/">
+<link rel="alternate" hreflang="id" href="https://nicedevelopments.github.io/haushaltsbuch/id/">
+<link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EBEBE8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Controle de gastos do mês">
+<meta property="og:title" content="Controle de gastos do mês – app simples para Android, sem banco">
+<meta property="og:description" content="App de controle de gastos mensal para Android: digite o valor e salve. Mostra o que sobra depois dos custos fixos – sem conta, sem banco, tudo no celular.">
+<meta property="og:url" content="https://nicedevelopments.github.io/haushaltsbuch/pt/">
+<meta property="og:image" content="https://nicedevelopments.github.io/haushaltsbuch/img/icon-512.png">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/haushaltsbuch/img/icon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="/haushaltsbuch/img/icon-180.png">
+<link rel="preload" href="/haushaltsbuch/fonts/heros-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/haushaltsbuch/css/site.css?v=e49a57c0">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("anim")</script>
+<script src="/haushaltsbuch/js/site.js?v=e49a57c0" defer onerror="document.documentElement.classList.remove('anim')"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Controle de gastos do mês", "alternateName": ["Gastos", "Simple Household Budget", "Einfaches Haushaltsbuch"], "operatingSystem": "Android", "applicationCategory": "FinanceApplication", "description": "App de controle de gastos mensal para Android: digite o valor e salve. Mostra o que sobra depois dos custos fixos – sem conta, sem banco, tudo no celular.", "url": "https://nicedevelopments.github.io/haushaltsbuch/pt/", "image": "https://nicedevelopments.github.io/haushaltsbuch/img/icon-512.png", "inLanguage": "pt", "screenshot": ["https://nicedevelopments.github.io/haushaltsbuch/img/pt-home.webp", "https://nicedevelopments.github.io/haushaltsbuch/img/pt-receipt.webp", "https://nicedevelopments.github.io/haushaltsbuch/img/pt-history.webp", "https://nicedevelopments.github.io/haushaltsbuch/img/pt-summary.webp"], "publisher": {"@type": "Organization", "name": "Nice Developments"}, "installUrl": "https://play.google.com/store/apps/details?id=com.nicedevelopments.simplebudget", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}, {"@type": "WebSite", "name": "Controle de gastos do mês", "alternateName": ["Gastos", "Simple Household Budget", "Einfaches Haushaltsbuch"], "url": "https://nicedevelopments.github.io/haushaltsbuch/pt/", "inLanguage": "pt"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto custa o app?", "acceptedAnswer": {"@type": "Answer", "text": "Você pode usar com anúncios. A partir do dia 7 ele mostra um banner no topo da tela inicial. A compra única “Remover anúncios” tira os anúncios para sempre; não há assinatura."}}, {"@type": "Question", "name": "Preciso de conta ou dos dados do meu banco?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Não há login nem ligação com o banco. Você mesmo anota renda, custos fixos e gastos, e tudo fica no seu celular."}}, {"@type": "Question", "name": "Tenho que escolher uma categoria para cada gasto?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Só o valor é obrigatório. Categoria, descrição e nota são opcionais. Quando você digita uma descrição, o app sugere uma categoria – aprendida com os seus próprios lançamentos, só no aparelho, e dá para desligar."}}, {"@type": "Question", "name": "Posso usar o app em dois celulares?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Como não há nuvem nem servidor, o app não sincroniza entre aparelhos. É o preço de os seus números nunca saírem do seu celular."}}, {"@type": "Question", "name": "O que acontece com o dinheiro que sobra no fim do mês?", "acceptedAnswer": {"@type": "Answer", "text": "Você decide nos ajustes: “Transportar sobra” leva o que restou para o mês seguinte, “Transportar déficit” desconta o que faltou no mês seguinte. Cada um pode ser ligado ou desligado separadamente."}}, {"@type": "Question", "name": "Tem versão para iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Controle de gastos do mês, da Nice Developments, só está disponível para Android, no Google Play."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="site">
+  <div class="wrap wide">
+    <a class="brand" href="/haushaltsbuch/pt/"><img src="/haushaltsbuch/img/icon-48.png" width="28" height="28" alt="">Controle de gastos do mês</a>
+    <nav class="site" aria-label="Navegação principal">
+      <a href="/haushaltsbuch/en/guides/">Guias (em inglês)</a>
+      <a href="/haushaltsbuch/" hreflang="de" lang="de">Deutsch</a><a href="/haushaltsbuch/en/" hreflang="en" lang="en">English</a><a href="/haushaltsbuch/es/" hreflang="es" lang="es">Español</a><a href="/haushaltsbuch/id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero"><div class="wrap wide hero__grid">
+    <div class="hero__text">
+      <p class="kicker">App de orçamento para Android</p>
+      <h1>Controle de gastos do mês</h1>
+      <p class="lead">Radicalmente simples. Anotar um gasto é: <strong>digitar o valor e tocar em Salvar.</strong> Um número grande mostra quanto ainda sobra neste mês depois dos custos fixos. Sem conta, sem ligação com o banco, sem nuvem.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.nicedevelopments.simplebudget&amp;hl=pt-BR">Disponível no Google Play</a>
+    </div>
+    <div class="hero__shot"><figure class="phone"><picture><source srcset="/haushaltsbuch/img/pt-home-dark.webp" media="(prefers-color-scheme: dark)"><img src="/haushaltsbuch/img/pt-home.webp" width="400" height="666" alt="Tela inicial: “Disponível R$ 1.222,65” em letras grandes com uma barra; abaixo, o valor R$ 4,20 já digitado, os campos Categoria e Descrição, o teclado numérico e o botão verde Salvar." decoding="async" fetchpriority="high"></picture><span class="toast" aria-hidden="true">R$ 4,20 salvo<b>Desfazer</b></span></figure></div>
+  </div></section>
+
+  <section class="simple"><div class="wrap wide">
+    <p class="kicker">O princípio</p>
+    <h2>O objetivo: o app de orçamento mais simples que existe</h2>
+    <p class="lead">Toda função nova tem que passar por um teste: anotar um gasto continua tão rápido quanto antes? Se não, ela não entra.</p>
+    <ul class="ticks"><li><strong>Um único campo obrigatório por gasto.</strong> O valor – todo o resto é opcional.</li><li><strong>Um número em vez de um painel.</strong> A tela inicial mostra o que ainda está disponível neste mês, com os custos fixos já descontados.</li><li><strong>O que é raro fica para depois.</strong> O app não pede data nem nota quando você anota um gasto – você adiciona depois ao lançamento, se precisar.</li><li><strong>Nada para administrar.</strong> Sem conta, sem senha, sem ligação com o banco, sem assinatura.</li></ul>
+    <p>O método, com ou sem o app (em inglês): <a href="/haushaltsbuch/en/guides/simple-household-budget/">How to keep a simple household budget</a>.</p>
+  </div></section>
+
+  <section class="feature"><div class="wrap wide feature__grid">
+      <div class="feature__text"><p class="kicker">Anotar</p><h2>Um gasto em dois toques</h2><p>Digite o valor e toque em Salvar – nada mais é obrigatório. Categoria, descrição, data e nota são opcionais e podem ser adicionadas depois.</p><p>Logo depois de salvar aparece <strong>Desfazer</strong>, caso você tenha digitado errado. Gastos esquecidos podem ser incluídos depois no histórico, com data e hora.</p></div>
+      <div class="feature__shot"><figure class="phone"><img src="/haushaltsbuch/img/pt-history.webp" width="340" height="566" alt="Histórico no modo escuro: os gastos por dia, com descrição, categoria e valor." decoding="async" loading="lazy"></figure></div>
+    </div></section><section class="feature flip"><div class="wrap wide feature__grid">
+      <div class="feature__text"><p class="kicker">Recibos</p><h2>Mostre o recibo para a câmera em vez de digitar</h2><p>Toque no ícone da câmera e enquadre o recibo. O app lê o total, a loja, a data e a hora e preenche tudo.</p><p>O reconhecimento de texto roda no seu celular. A imagem não é guardada nem enviada para lugar nenhum.</p></div>
+      <div class="feature__shot"><figure class="phone"><img src="/haushaltsbuch/img/pt-receipt.webp" width="340" height="566" alt="A câmera lê um recibo; a linha do total, “TOTAL R$ 22,42”, aparece destacada em verde." decoding="async" loading="lazy"></figure></div>
+    </div></section><section class="feature"><div class="wrap wide feature__grid">
+      <div class="feature__text"><p class="kicker">Custos fixos</p><h2>Anote uma vez e esqueça</h2><p>Aluguel, luz, seguro, assinaturas: na configuração o app pergunta um item de cada vez – se você não tem, deixa em branco. Custos anuais, como o IPVA ou um seguro, ganham uma data de vencimento.</p><p>Daí em diante o app desconta sozinho seus custos fixos todo mês. O número grande da tela inicial é o que realmente sobra.</p></div>
+      <div class="feature__shot"><div class="meter" role="img" aria-label="Exemplo: 612,40 reais disponíveis. A barra está em 38 por cento, o mês está na metade.">
+        <span class="meter__label">Disponível</span>
+        <span class="meter__num">R$ 612<small>,40</small></span>
+        <span class="meter__bar"><i style="width:38%"></i><b style="left:50%"></b></span>
+        <span class="meter__note">A barra mostra quanto já foi gasto; a marca, quanto do mês já passou.</span>
+      </div></div>
+    </div></section><section class="feature flip"><div class="wrap wide feature__grid">
+      <div class="feature__text"><p class="kicker">Análise</p><h2>O mês inteiro em três números</h2><p>Gasto, restante e média por dia. Além disso, um gráfico por dia e a composição do seu mês: renda, custos fixos, para gastar.</p><p>Sem painéis, sem doze gráficos. Se quiser, o que sobra passa para o mês seguinte.</p></div>
+      <div class="feature__shot"><figure class="phone"><img src="/haushaltsbuch/img/pt-summary.webp" width="340" height="566" alt="Análise: Gasto R$ 380,55, Restante R$ 1.218,45, Por dia R$ 31,71 em média, um gráfico por dia e a composição em renda, custos fixos e para gastar." decoding="async" loading="lazy"></figure></div>
+    </div></section>
+
+  <section class="band"><div class="wrap wide">
+    <h2>Seus números ficam no seu celular</h2>
+    <p class="lead">Tudo o que você anota fica só no seu aparelho. Não existe servidor onde suas finanças possam ir parar.</p>
+    <ul class="ticks"><li><strong>Sem conta, sem login</strong> – abra o app e comece.</li><li><strong>Sem ligação com o banco</strong> – você nunca digita sua senha do banco em lugar nenhum.</li><li><strong>Sem nuvem, sem estatísticas de uso, sem relatórios de erro.</strong> Por isso também não há sincronização entre aparelhos.</li><li><strong>26 idiomas</strong>, do árabe ao vietnamita, entre eles o português. A moeda segue a sua região.</li><li><strong>Anúncios a partir do dia 7:</strong> um banner no topo da tela inicial. Os anúncios não veem nenhum número do seu orçamento. Uma compra única, “Remover anúncios”, tira os anúncios para sempre; não há assinatura.</li></ul>
+    <p><a href="/haushaltsbuch/privacy/">Ler a política de privacidade (em inglês)</a></p>
+  </div></section>
+
+  <section><div class="wrap wide">
+    <h2>Guias para o seu orçamento mensal (em inglês)</h2>
+    <p class="lead">Úteis com ou sem o app: calcular um orçamento diário, listar os custos fixos, prever as contas anuais. Por enquanto só em inglês.</p>
+    <ul class="tiles cols"><li><a href="/haushaltsbuch/en/guides/simple-household-budget/" hreflang="en"><b>Como fazer um controle de gastos simples, sem planilha</b><em>Três números, sem categorias: a menor versão que ainda funciona.</em></a></li><li><a href="/haushaltsbuch/en/guides/how-much-can-i-spend-per-day/" hreflang="en"><b>Quanto posso gastar por dia?</b><em>Seu orçamento diário em três passos – no começo do mês e na metade.</em></a></li><li><a href="/haushaltsbuch/en/guides/fixed-expenses-list/" hreflang="en"><b>Lista de custos fixos: o que entra e quanto sobra?</b><em>Uma lista de itens típicos e a soma que mostra o que resta.</em></a></li><li><a href="/haushaltsbuch/en/guides/yearly-expenses-monthly-budget/" hreflang="en"><b>Como encaixar as contas anuais no orçamento mensal</b><em>Seguros, IPVA e anuidades: dois métodos para nenhum mês ficar no vermelho.</em></a></li><li><a href="/haushaltsbuch/en/guides/budget-app-without-bank-account/" hreflang="en"><b>App de orçamento sem ligação com o banco nem cadastro</b><em>O que você ganha, do que abre mão e como avaliar um app antes de instalar.</em></a></li><li><a href="/haushaltsbuch/en/guides/budget-from-payday/" hreflang="en"><b>Orçamento de salário a salário</b><em>Recebe no dia 15 ou no dia 28? Alinhe o mês do orçamento com o dia do salário.</em></a></li><li><a href="/haushaltsbuch/en/guides/leftover-money-end-of-month/" hreflang="en"><b>Sobrou dinheiro no fim do mês – ou faltou?</b><em>Transportar, guardar ou recomeçar: o que fazer com o resto e o que ajuda depois de estourar o orçamento.</em></a></li><li><a href="/haushaltsbuch/en/guides/expense-tracking-tips/" hreflang="en"><b>Como anotar os gastos e não desistir: 7 dicas</b><em>Por que quase todo mundo desiste em duas semanas – e como fazer durar.</em></a></li></ul>
+    <p><a href="/haushaltsbuch/en/guides/">Ver todos os guias (em inglês)</a></p>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq"><details><summary>Quanto custa o app?</summary><div class="answer"><p>Você pode usar com anúncios. A partir do dia 7 ele mostra um banner no topo da tela inicial. A compra única “Remover anúncios” tira os anúncios para sempre; não há assinatura.</p></div></details><details><summary>Preciso de conta ou dos dados do meu banco?</summary><div class="answer"><p>Não. Não há login nem ligação com o banco. Você mesmo anota renda, custos fixos e gastos, e tudo fica no seu celular.</p></div></details><details><summary>Tenho que escolher uma categoria para cada gasto?</summary><div class="answer"><p>Não. Só o valor é obrigatório. Categoria, descrição e nota são opcionais. Quando você digita uma descrição, o app sugere uma categoria – aprendida com os seus próprios lançamentos, só no aparelho, e dá para desligar.</p></div></details><details><summary>Posso usar o app em dois celulares?</summary><div class="answer"><p>Não. Como não há nuvem nem servidor, o app não sincroniza entre aparelhos. É o preço de os seus números nunca saírem do seu celular.</p></div></details><details><summary>O que acontece com o dinheiro que sobra no fim do mês?</summary><div class="answer"><p>Você decide nos ajustes: “Transportar sobra” leva o que restou para o mês seguinte, “Transportar déficit” desconta o que faltou no mês seguinte. Cada um pode ser ligado ou desligado separadamente.</p></div></details><details><summary>Tem versão para iPhone?</summary><div class="answer"><p>Não. Controle de gastos do mês, da Nice Developments, só está disponível para Android, no Google Play.</p></div></details></div>
+  </div></section>
+
+  <section class="final"><div class="wrap">
+    <h2>Saber o que sobra. Sem esforço.</h2>
+    <p class="lead">Um número, uma barra, dois toques por gasto. Para Android.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.nicedevelopments.simplebudget&amp;hl=pt-BR">Disponível no Google Play</a>
+  </div></section>
+</main>
+
+<footer class="site">
+  <div class="wrap wide foot">
+    <p><strong>Controle de gastos do mês</strong> · Controle de gastos para Android, radicalmente simples.</p>
+    <p><a href="/haushaltsbuch/en/guides/">Guias (em inglês)</a> · <a href="/haushaltsbuch/privacy/">Privacidade (em inglês)</a> · <a href="/haushaltsbuch/imprint/" rel="nofollow">Aviso legal (em inglês)</a></p>
+    <p class="fine">Nice Developments · Google Play e Android são marcas da Google LLC.</p>
+  </div>
+</footer>
+</body>
+</html>

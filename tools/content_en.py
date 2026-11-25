@@ -89,7 +89,7 @@ C = {
             "**No bank connection** – you never enter login details anywhere.",
             "**No cloud, no usage statistics, no crash reports.** That also means no sync between devices.",
             "**Ads from day seven:** one banner at the top of the home screen. The ads never see a single number from your budget. A one-time purchase removes them for good – there is no subscription.",
-            "**Seven languages:** English, German, Spanish, French, Italian, Dutch, Portuguese. The currency follows your region.",
+            "**{languages} languages**, from Arabic to Vietnamese – including English, German, Spanish, French, Portuguese and Indonesian. The currency follows your region.",
         ],
         "privacy_link": "Read the privacy policy",
         "guides_h2": "Guides to your monthly budget",

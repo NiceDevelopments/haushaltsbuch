@@ -32,18 +32,37 @@ PLAY_ID = "com.nicedevelopments.simplebudget"
 # Erst auf True stellen, wenn die App oeffentlich bei Google Play steht. Bis dahin zeigt jede
 # Seite den neutralen Hinweis "bald bei Google Play" ohne Link.
 PLAY_LIVE = True
-PLAY_HL = {"de": "de", "en": "en"}
+PLAY_HL = {"de": "de", "en": "en", "es": "es", "pt": "pt-BR", "id": "id"}
 
-LOCALES = ["de", "en"]
-C = {code: importlib.import_module(f"content_{code}").C for code in LOCALES}
+# es/pt/id seit 24.11.2026 (Welle 1): nur Startseite; Anleitungen verlinken auf die englischen.
+LOCALES = [c for c in ["de", "en", "es", "pt", "id"] if (ROOT / "tools" / f"content_{c}.py").exists()]
+import facts as F  # noqa: E402  zentrale Fakten, Platzhalter {name}
+
+
+def _fill(v):
+    if isinstance(v, str):
+        return F.fill(v)
+    if isinstance(v, list):
+        return [_fill(x) for x in v]
+    if isinstance(v, tuple):
+        return tuple(_fill(x) for x in v)
+    if isinstance(v, dict):
+        return {k: _fill(x) for k, x in v.items()}
+    return v
+
+
+C = {code: _fill(importlib.import_module(f"content_{code}").C) for code in LOCALES}
 # Zusatz-Anleitungen (ab 24.11.2026) stehen in tools/guides_<sprache>_2.py, Liste GUIDES.
 for _code in LOCALES:
+    if not C[_code]["guides"]:
+        continue
     try:
         C[_code]["guides"] = C[_code]["guides"] + importlib.import_module(f"guides_{_code}_2").GUIDES
     except ModuleNotFoundError:
         pass
 import bereiche as BR  # noqa: E402  Bereiche der Anleitungen (24.11.2026)
-for _code in LOCALES:
+GUIDED = [c for c in LOCALES if C[c]["guides"]]  # Sprachen mit eigenen Anleitungen
+for _code in GUIDED:
     _ohne = [g["id"] for g in C[_code]["guides"] if g["id"] not in BR.HUB_OF]
     if _ohne:
         raise SystemExit(f"Anleitung ohne Bereich in tools/bereiche.py: {_ohne}")
@@ -63,6 +82,8 @@ LEGAL = {
     "de": {"privacy": "/datenschutz/", "imprint": "/impressum/"},
     "en": {"privacy": "/privacy/", "imprint": "/imprint/"},
 }
+for _c in ("es", "pt", "id"):  # Rechtsseiten nur de/en; die neuen Sprachen zeigen die englischen
+    LEGAL[_c] = LEGAL["en"]
 
 e = html.escape
 
@@ -72,6 +93,8 @@ def home_path(code: str) -> str:
 
 
 def guides_path(code: str) -> str:
+    if not C[code]["guides"]:  # noch keine Anleitungen in dieser Sprache -> englische
+        code = "en"
     return "/anleitungen/" if code == "de" else f"/{code}/guides/"
 
 
@@ -197,7 +220,9 @@ def play_badge(code: str) -> str:
 MOCKUP_RATIO = (3, 5)  # Breite : Hoehe der Bilder aus store/web_mockups.py (Handy-Mockup, transparent)
 
 
-TOAST = {"de": ("4,20 € gespeichert", "Rückgängig"), "en": ("€4.20 saved", "Undo")}  # wie AppSnackbarHost
+TOAST = {"de": ("4,20 € gespeichert", "Rückgängig"), "en": ("€4.20 saved", "Undo"),
+         "es": ("4,20 € guardado", "Deshacer"), "pt": ("R$ 4,20 salvo", "Desfazer"),
+         "id": ("Rp15.000 tersimpan", "Urungkan")}  # wie AppSnackbarHost
 
 
 def phone(src: str, alt: str, *, eager: bool = False, w: int = 420, toast_code: str = "") -> str:
@@ -276,9 +301,12 @@ def home(code: str) -> str:
     </div></section>"""
         for i, f in enumerate(h["features"]))
     nots = "".join(f"<li>{inline(x)}</li>" for x in h["nots"])
+    gsrc = code if c["guides"] else "en"
+    cards = h.get("guide_cards") or [(g["h1"], g["teaser"]) for g in C[gsrc]["guides"]]
     guide_cards = "".join(
-        f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
-        for g in c["guides"][:HOME_GUIDES])
+        f'<li><a href="{href(guide_path(gsrc, g))}"{"" if gsrc == code else " hreflang=\"en\""}>'
+        f'<b>{e(title)}</b><em>{e(teaser)}</em></a></li>'
+        for g, (title, teaser) in list(zip(C[gsrc]["guides"], cards))[:HOME_GUIDES])
     graph = {"@context": "https://schema.org", "@graph": [app_ld(code), {
         "@type": "WebSite", "name": c["app_name"], "alternateName": h["alt_names"],
         "url": abs_url(home_path(code)), "inLanguage": code}]}
@@ -443,7 +471,7 @@ def guides_index(code: str) -> str:
     c = C[code]
     u = c["ui"]
     gi = c["guides_index"]
-    alts = {x: guides_path(x) for x in LOCALES}
+    alts = {x: guides_path(x) for x in GUIDED}
     card = lambda g: f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
     cards_html = "".join(
         f'<h2 class="hub-h"><a href="{href(hub_path(code, hb))}">{e(BR.TEXT[code][hb]["name"])}</a></h2>'
@@ -470,7 +498,7 @@ def hub_page(code: str, hub: str) -> str:
     u = c["ui"]
     t = BR.TEXT[code][hub]
     path = hub_path(code, hub)
-    alts = {x: hub_path(x, hub) for x in LOCALES}
+    alts = {x: hub_path(x, hub) for x in GUIDED}
     gs = hub_guides(code, hub)
     cards = "".join(f'<li><a href="{href(guide_path(code, g))}"><b>{e(g["h1"])}</b><em>{e(g["teaser"])}</em></a></li>'
                     for g in gs)
@@ -535,14 +563,16 @@ def main() -> None:
     for code in LOCALES:
         write(home_path(code), trennen(code, home(code)))
         pages.append((home_path(code), {x: home_path(x) for x in LOCALES}))
+        if code not in GUIDED:
+            continue
         write(guides_path(code), trennen(code, guides_index(code)))
-        pages.append((guides_path(code), {x: guides_path(x) for x in LOCALES}))
+        pages.append((guides_path(code), {x: guides_path(x) for x in GUIDED}))
         for g in C[code]["guides"]:
             write(guide_path(code, g), trennen(code, guide_page(code, g)))
             pages.append((guide_path(code, g), guide_alts(g["id"])))
         for hb in BR.ORDER:
             write(hub_path(code, hb), trennen(code, hub_page(code, hb)))
-            pages.append((hub_path(code, hb), {x: hub_path(x, hb) for x in LOCALES}))
+            pages.append((hub_path(code, hb), {x: hub_path(x, hb) for x in GUIDED}))
 
     urls = []
     for path, alts in pages:

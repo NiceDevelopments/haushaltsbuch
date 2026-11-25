@@ -97,7 +97,7 @@ C = {
             "**Keine Bankverbindung** – du gibst nirgends Zugangsdaten ein.",
             "**Keine Cloud, keine Nutzungsstatistik, keine Absturzberichte.** Deshalb gibt es auch keine Synchronisierung zwischen Geräten.",
             "**Werbung ab dem siebten Tag:** ein Banner oben auf dem Startbildschirm. Die Werbung bekommt keine Zahl aus deinem Haushaltsbuch zu sehen. Ein einmaliger Kauf entfernt sie dauerhaft – ein Abo gibt es nicht.",
-            "**Sieben Sprachen:** Deutsch, Englisch, Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch. Die Währung richtet sich nach deiner Region.",
+            "**{languages} Sprachen**, von Arabisch bis Vietnamesisch – darunter Deutsch, Englisch, Spanisch, Französisch, Portugiesisch und Indonesisch. Die Währung richtet sich nach deiner Region.",
         ],
         "privacy_link": "Datenschutzerklärung lesen",
         "guides_h2": "Anleitungen rund ums Monatsbudget",

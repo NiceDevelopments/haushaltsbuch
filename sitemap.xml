@@ -4,6 +4,9 @@
     <loc>https://nicedevelopments.github.io/haushaltsbuch/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nicedevelopments.github.io/haushaltsbuch/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nicedevelopments.github.io/haushaltsbuch/pt/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nicedevelopments.github.io/haushaltsbuch/id/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
   </url>
   <url>
@@ -178,6 +181,9 @@
     <loc>https://nicedevelopments.github.io/haushaltsbuch/en/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nicedevelopments.github.io/haushaltsbuch/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nicedevelopments.github.io/haushaltsbuch/pt/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nicedevelopments.github.io/haushaltsbuch/id/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
   </url>
   <url>
@@ -347,5 +353,32 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/kosten-im-griff/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/control-costs/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/es/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nicedevelopments.github.io/haushaltsbuch/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nicedevelopments.github.io/haushaltsbuch/pt/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nicedevelopments.github.io/haushaltsbuch/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nicedevelopments.github.io/haushaltsbuch/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nicedevelopments.github.io/haushaltsbuch/pt/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nicedevelopments.github.io/haushaltsbuch/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/id/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nicedevelopments.github.io/haushaltsbuch/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nicedevelopments.github.io/haushaltsbuch/pt/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nicedevelopments.github.io/haushaltsbuch/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/"/>
   </url>
 </urlset>
