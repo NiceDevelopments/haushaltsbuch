@@ -166,6 +166,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
   </url>
   <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-zum-ausdrucken/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-zum-ausdrucken/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/printable-household-budget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/printable-household-budget/"/>
+  </url>
+  <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/"/>
@@ -353,6 +359,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-anfangen-neues-jahr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/printable-household-budget/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-zum-ausdrucken/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/printable-household-budget/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/printable-household-budget/"/>
   </url>
   <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/</loc>

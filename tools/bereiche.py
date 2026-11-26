@@ -19,7 +19,7 @@ Anleitung "habit"). Beschreibung <= 160 Zeichen.
 ORDER = ["basics", "methods", "howmuch", "costs"]
 
 OF = {
-    "basics": ["simple", "habit", "newyear", "nobank", "categories", "receipts", "couples", "seniors"],
+    "basics": ["simple", "printable", "habit", "newyear", "nobank", "categories", "receipts", "couples", "seniors"],
     "methods": ["rule503020", "envelope", "kakeibo", "nospend", "payday"],
     "howmuch": ["daily", "groceries", "rent", "savehowmuch", "emergency"],
     "costs": ["fixed", "yearly", "subscriptions", "impulse", "lowincome", "irregular", "leftover"],

@@ -982,7 +982,7 @@ GUIDES = [
                     "**Nur den Betrag aufschreiben.** Kategorien sind freiwillig. Wer weiß, was pro Tag geht, braucht keine Statistik.",
                     "**Gleich an der Kasse oder abends**, aber jeden Tag zur selben Zeit. Kassenzettel in eine Schale legen und abends eintragen ist ein guter Weg.",
                     "**Bargeld zählt mit.** Wer viel bar bezahlt, schreibt nicht das Abheben auf, sondern das, was ausgegeben wird.",
-                    "**Papier ist in Ordnung.** Ein Heft oder ein ausgedrucktes Blatt reicht völlig. Wichtig ist nur, dass es jeden Tag griffbereit liegt.",
+                    "**Papier ist in Ordnung.** Ein Heft oder ein ausgedrucktes Blatt reicht völlig, zum Beispiel unser [Haushaltsbuch zum Ausdrucken](/anleitungen/haushaltsbuch-zum-ausdrucken/). Wichtig ist nur, dass es jeden Tag griffbereit liegt.",
                 ]},
             ]],
             ["angehoerige", "Für Angehörige: helfen, ohne zu bevormunden", [
@@ -1057,7 +1057,49 @@ GUIDES = [
             ["Was mache ich mit den Ausgaben von Weihnachten?",
              ["Sie gehören zum alten Jahr. Im Kassensturz siehst du, was davon noch offen ist, etwa eine Kreditkartenabrechnung. Plane den offenen Betrag im Januar als feste Ausgabe ein."]],
             ["Papier oder App?",
-             ["Beides funktioniert. Entscheidend ist, dass du es beim Bezahlen oder abends sofort zur Hand hast."]],
+             ["Beides funktioniert. Entscheidend ist, dass du es beim Bezahlen oder abends sofort zur Hand hast. Für Papier: [Haushaltsbuch zum Ausdrucken](/anleitungen/haushaltsbuch-zum-ausdrucken/)."]],
+        ],
+    },
+    # ------------------------------------------------------------ Druckvorlage (26.11.2026, Gideon)
+    # Suchnachfrage: „haushaltsbuch vorlage zum ausdrucken“, „haushaltsbuch führen handschriftlich“.
+    {
+        "id": "printable",
+        "slug": "haushaltsbuch-zum-ausdrucken",
+        "title": "Haushaltsbuch zum Ausdrucken: kostenlose PDF-Vorlage",
+        "desc": "Haushaltsbuch zum Ausdrucken, kostenlos als PDF: große Schrift, eine Seite für Einnahmen und feste Ausgaben, dann ein Blatt pro Monat.",
+        "h1": "Haushaltsbuch zum Ausdrucken",
+        "teaser": "Große Schrift, eine Seite für das Feste, ein Blatt pro Monat. Kostenloses PDF.",
+        "answer": "**Kostenlos zum Ausdrucken, in großer Schrift.** Auf der ersten Seite stehen deine Einnahmen und festen Ausgaben. Auf den Monatsblättern schreibst du auf, was du ausgibst.",
+        "updated": "2026-11-26", "updated_label": "November 2026",
+        "related": ["simple", "fixed", "seniors"],
+        "sections": [
+            ["download", "Herunterladen", [
+                {"download": ["PDF herunterladen", "/vorlagen/mein-haushaltsbuch.pdf", "A4, 13 Seiten, kostenlos"]},
+                {"pages": [["vorlage-de-seite-1.webp", "Erste Seite: Monatliche Einnahmen, feste monatliche Ausgaben, Zum Leben übrig"],
+                           ["vorlage-de-monat.webp", "Monatsblatt: Zum Leben übrig, Liste mit Tag, Wofür und Betrag, Übrig gesamt"]]},
+            ]],
+            ["so-gehts", "So geht's", [
+                {"steps": [
+                    "**Erste Seite einmal ausfüllen:** was jeden Monat reinkommt und was fest abgeht. Unten steht dann, was dir zum Leben übrig bleibt.",
+                    "**Jeden Monat** diese Zahl oben auf ein Monatsblatt schreiben.",
+                    "**Aufschreiben, was du ausgibst.** Am Monatsende zusammenzählen und abziehen.",
+                ]},
+                "Reicht ein Blatt nicht, druckst du einfach ein weiteres aus.",
+            ]],
+        ],
+        "app": {
+            "h2": "Lieber am Handy?",
+            "body": [
+                "Das Einfache Haushaltsbuch für Android rechnet alles selbst. Feste Ausgaben trägst du einmal ein, eine Ausgabe sind zwei Klicks: Betrag eintippen, speichern.",
+            ],
+        },
+        "faq": [
+            ["Kostet die Vorlage etwas?",
+             ["Nein. Ausdrucken, ausfüllen, fertig."]],
+            ["Muss ich im Januar anfangen?",
+             ["Nein. Du fängst in dem Monat an, in dem du willst."]],
+            ["Was mache ich, wenn ein Blatt nicht reicht?",
+             ["Druck ein zweites Monatsblatt aus und schreib dort weiter."]],
         ],
     },
 ]

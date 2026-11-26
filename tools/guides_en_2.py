@@ -975,7 +975,7 @@ GUIDES = [
                     "**Write down the amount only.** Categories are optional. If you know what's available per day, you don't need statistics.",
                     "**At the till or in the evening**, but at the same time every day. Putting receipts in a bowl and writing them down in the evening works well.",
                     "**Cash counts too.** Don't write down the withdrawal, write down what is actually spent.",
-                    "**Paper is fine.** A notebook or a printed sheet is enough. What matters is that it's within reach every day.",
+                    "**Paper is fine.** A notebook or a printed sheet is enough, such as our [printable household budget](/en/guides/printable-household-budget/). What matters is that it's within reach every day.",
                 ]},
             ]],
             ["family", "For family: helping without taking over", [
@@ -1049,7 +1049,48 @@ GUIDES = [
             ["What about the holiday spending?",
              ["It belongs to last year. The check-up shows what's still open, such as a credit card bill. Plan the outstanding amount into January as a fixed cost."]],
             ["Paper or app?",
-             ["Both work. What matters is having it to hand when you pay or in the evening."]],
+             ["Both work. What matters is having it to hand when you pay or in the evening. For paper: [printable household budget](/en/guides/printable-household-budget/)."]],
+        ],
+    },
+    # ------------------------------------------------------------ printable (26 Nov 2026)
+    {
+        "id": "printable",
+        "slug": "printable-household-budget",
+        "title": "Printable household budget: free PDF template",
+        "desc": "A free printable household budget PDF in large print: one page for income and fixed monthly costs, then one sheet per month.",
+        "h1": "Printable household budget",
+        "teaser": "Large print, one page for fixed costs, one sheet per month. Free PDF.",
+        "answer": "**Free to print, in large type.** The first page holds your income and fixed costs. On the month sheets you write down what you spend.",
+        "updated": "2026-11-26", "updated_label": "November 2026",
+        "related": ["simple", "fixed", "seniors"],
+        "sections": [
+            ["download", "Download", [
+                {"download": ["Download PDF", "/vorlagen/my-household-budget.pdf", "A4, 13 pages, free"]},
+                {"pages": [["vorlage-en-seite-1.webp", "First page: monthly income, fixed monthly costs, left to live on"],
+                           ["vorlage-en-monat.webp", "Month sheet: left to live on, list with day, what for and amount, total left"]]},
+            ]],
+            ["how", "How it works", [
+                {"steps": [
+                    "**Fill in the first page once:** what comes in each month and what goes out for sure. At the bottom you see what's left to live on.",
+                    "**Every month**, copy that number to the top of a month sheet.",
+                    "**Write down what you spend.** At the end of the month, add it up and take it off.",
+                ]},
+                "If one sheet isn't enough, just print another.",
+            ]],
+        ],
+        "app": {
+            "h2": "Prefer your phone?",
+            "body": [
+                "Simple Household Budget for Android does the adding up for you. Enter fixed costs once, and adding an expense takes two taps: type the amount, save.",
+            ],
+        },
+        "faq": [
+            ["Does the template cost anything?",
+             ["No. Print it, fill it in, done."]],
+            ["Do I have to start in January?",
+             ["No. Start in whichever month you like."]],
+            ["What if one sheet isn't enough?",
+             ["Print a second month sheet and carry on there."]],
         ],
     },
 ]
