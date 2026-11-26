@@ -3,7 +3,7 @@
 (function () {
   var root = document.documentElement;
   if (!root.classList.contains("anim")) return;
-  var targets = document.querySelectorAll(".phone, .feature__text, .meter");
+  var targets = document.querySelectorAll(".phone, .feature__text, .meter:not(.calc-tool__result)");
 
   /* Verfuegbar zaehlt vom Monatsbudget herunter, waehrend der Balken (ausgegeben) sich fuellt: 38 % weg. */
   function countDown(meter) {

@@ -948,4 +948,116 @@ GUIDES = [
              ["Das passiert. Wichtig ist, dass der Dauerauftrag in normalen Monaten läuft. Wenn es öfter nicht klappt, ist die Sparrate zu hoch angesetzt – lieber kleiner, dafür jeden Monat."]],
         ],
     },
+
+    # ------------------------------------------------------------ Senioren / Helfer (25.11.2026)
+    # Suchnachfrage (Autocomplete 25.11.): „haushaltsbuch für senioren“, „haushaltsbuch für rentner“,
+    # „budget rentner ehepaar“; en „helping elderly parents with finances“, „budget worksheet for elderly“.
+    {
+        "id": "seniors",
+        "slug": "haushaltsbuch-fuer-senioren",
+        "title": "Haushaltsbuch für Senioren: einfach anfangen, auch mit Hilfe",
+        "desc": "Haushaltsbuch für Senioren und Rentner: Rente minus feste Kosten, was pro Tag bleibt, und wie Angehörige beim Einrichten helfen, ohne zu bevormunden.",
+        "h1": "Haushaltsbuch für Senioren – und für Angehörige, die helfen",
+        "teaser": "Rente minus feste Kosten, ein Betrag pro Tag – und wie Kinder oder Enkel beim Einrichten helfen.",
+        "answer": "**Es reicht eine einfache Rechnung: Rente minus feste Kosten.** Was übrig bleibt, teilst du durch die Tage im Monat. Aufschreiben musst du nur die Beträge. Kinder oder Enkel können beim ersten Mal helfen.",
+        "updated": "2026-11-25", "updated_label": "November 2026",
+        "related": ["daily", "fixed", "payday"],
+        "sections": [
+            ["rechnung", "Die eine Rechnung: Rente minus feste Kosten", [
+                {"steps": [
+                    "**Einnahmen zusammenzählen:** Rente, Betriebsrente, Witwenrente, Wohngeld, also alles, was jeden Monat sicher aufs Konto kommt.",
+                    "**Feste Kosten abziehen:** Miete oder Hausgeld, Strom, Heizung, Telefon, Versicherungen, regelmäßige Zuzahlungen für Medikamente, Abos, Spenden per Dauerauftrag.",
+                    "**Durch die Tage teilen:** Was übrig ist, geteilt durch die Tage bis zur nächsten Rente, ist das Geld pro Tag für Einkauf, Apotheke, Friseur und Geschenke.",
+                ]},
+                {"calc": [["Rente (netto)", "1.480,00 €"], ["− feste Kosten", "940,00 €"], ["= frei im Monat", "540,00 €"], ["÷ 30 Tage", ""], ["**pro Tag**", "18,00 €"]],
+                 "caption": "Beispiel mit erfundenen Zahlen"},
+                "Selbst rechnen geht mit dem [Tagesbudget-Rechner](/anleitungen/wie-viel-darf-ich-pro-tag-ausgeben/#rechner).",
+            ]],
+            ["rentenzahltag", "Wann kommt die Rente? Den Monat danach ausrichten", [
+                "Die gesetzliche Rente kommt am **letzten Bankarbeitstag des Monats**: bei Rentenbeginn ab April 2004 für den ablaufenden Monat, bei älteren Renten im Voraus für den nächsten. Das Geld ist also kurz vor dem Monatsersten da, und ein Haushaltsbuch vom 1. bis zum Monatsende passt dazu. Kommt anderes Geld mitten im Monat, etwa eine Betriebsrente, kann der Budgetmonat am Zahltag beginnen: [Monatsbudget ab Gehaltseingang](/anleitungen/budget-ab-gehaltseingang/).",
+                "Jährliche Kosten wie Kfz-Versicherung, Hausrat oder die Nebenkostenabrechnung durch zwölf teilen und monatlich einplanen: [Jährliche Kosten im Monatsbudget](/anleitungen/jaehrliche-kosten-im-budget/).",
+            ]],
+            ["einfach", "So bleibt es einfach", [
+                {"list": [
+                    "**Nur den Betrag aufschreiben.** Kategorien sind freiwillig. Wer weiß, was pro Tag geht, braucht keine Statistik.",
+                    "**Gleich an der Kasse oder abends**, aber jeden Tag zur selben Zeit. Kassenzettel in eine Schale legen und abends eintragen ist ein guter Weg.",
+                    "**Bargeld zählt mit.** Wer viel bar bezahlt, schreibt nicht das Abheben auf, sondern das, was ausgegeben wird.",
+                    "**Papier ist in Ordnung.** Ein Heft oder ein ausgedrucktes Blatt reicht völlig. Wichtig ist nur, dass es jeden Tag griffbereit liegt.",
+                ]},
+            ]],
+            ["angehoerige", "Für Angehörige: helfen, ohne zu bevormunden", [
+                "Oft schlagen Kinder oder Enkel ein Haushaltsbuch vor. Das klappt am besten, wenn die Eltern selbst entscheiden und ihr eigenes Geld im Blick behalten:",
+                {"list": [
+                    "**Einmal gemeinsam einrichten:** Einnahmen und feste Kosten zusammen von den Kontoauszügen abschreiben. Das ist die eigentliche Arbeit, danach ist das Führen leicht.",
+                    "**Nur das Nötigste zeigen:** einen Betrag eintragen und sehen, was noch übrig ist. Mehr nicht.",
+                    "**Nachfragen statt kontrollieren:** Einmal im Monat gemeinsam draufschauen, wenn die Eltern das möchten.",
+                    "**Rechtliches gehört nicht ins Haushaltsbuch.** Wer Bankgeschäfte für die Eltern erledigen soll, braucht eine Vollmacht. Dazu beraten Bank, Notar oder Betreuungsvereine.",
+                ]},
+            ]],
+        ],
+        "app": {
+            "h2": "Das Einfache Haushaltsbuch für Ältere",
+            "body": [
+                "Auf dem Startbildschirm steht groß eine Zahl: was in diesem Monat nach den festen Kosten noch übrig ist. Eine Ausgabe sind zwei Klicks: Betrag eintippen, speichern. Passt das Ziffernfeld nicht auf den Bildschirm, etwa bei sehr großer Schrift, zeigt die App stattdessen den Knopf **Jetzt tracken**. Das ist ein Klick mehr, dafür bleiben die Tasten groß.",
+                "Einnahmen und feste Kosten trägt man einmal ein. Das können Angehörige beim Einrichten übernehmen. Ehrlich dazu: Die App hat kein Konto und keine Cloud. Angehörige sehen die Zahlen also nicht aus der Ferne, sie bleiben auf dem Handy der Eltern. Ab dem siebten Tag zeigt die App oben einen Werbebanner; ein einmaliger Kauf entfernt ihn dauerhaft.",
+            ],
+        },
+        "faq": [
+            ["Brauche ich für ein Haushaltsbuch einen Computer?",
+             ["Nein. Ein Heft, ein ausgedrucktes Blatt oder eine App auf dem Handy reichen. Entscheidend ist, dass es dort liegt, wo man bezahlt oder abends sitzt."]],
+            ["Muss ich jede Ausgabe einer Kategorie zuordnen?",
+             ["Nein. Für die Frage „Reicht das Geld bis zur nächsten Rente?“ genügt der Betrag."]],
+            ["Wie oft sollten Angehörige mit draufschauen?",
+             ["So oft, wie die Eltern es möchten. Einmal im Monat zehn Minuten sind für die meisten genug."]],
+        ],
+    },
+
+    # ------------------------------------------------------------ Jahresanfang (25.11.2026)
+    # Suchnachfrage DE schwach (Autocomplete: „haushaltsbuch wie anfangen“, keine Vorsatz-Begriffe);
+    # en stärker („new year budget plan/template/tips“). Januar-Landeseite auf Gideons Wunsch (24.11.).
+    {
+        "id": "newyear",
+        "slug": "haushaltsbuch-anfangen-neues-jahr",
+        "title": "Haushaltsbuch anfangen zum neuen Jahr: Start in 4 Schritten",
+        "desc": "Haushaltsbuch zum Jahresanfang anfangen: Kassensturz, feste und jährliche Kosten, Tagesbudget und 30 Tage nur Beträge – damit der Vorsatz den Februar übersteht.",
+        "h1": "Haushaltsbuch anfangen: der Start ins neue Jahr in 4 Schritten",
+        "teaser": "Kassensturz, Jahreskosten, Tagesbudget – und warum die ersten 30 Tage nur Beträge brauchen.",
+        "answer": "**Vier Schritte reichen.** Schau, was auf dem Konto ist. Schreib auf, was fest abgeht. Rechne aus, was pro Tag bleibt. Dann schreibst du 30 Tage lang nur die Beträge auf – sonst nichts.",
+        "updated": "2026-11-25", "updated_label": "November 2026",
+        "related": ["simple", "habit", "yearly"],
+        "sections": [
+            ["kassensturz", "Schritt 1: Kassensturz nach den Feiertagen", [
+                "Nach Weihnachten ist das Konto oft leerer als gedacht. Schreib einmal auf, wie es wirklich steht: Kontostand, offene Rechnungen, Kreditkartenabrechnung, Ratenkäufe. Nicht bewerten, nur festhalten. Daran misst du im Dezember, was sich verändert hat.",
+            ]],
+            ["kosten", "Schritt 2: feste und jährliche Kosten", [
+                "Liste alles auf, was jeden Monat sicher abgeht: Miete, Strom, Handy, Versicherungen, Abos. Eine Vorlage: [Fixkosten-Liste](/anleitungen/fixkosten-liste/).",
+                "Der Januar ist ein guter Monat für die **jährlichen** Kosten, denn viele werden zum Jahresanfang fällig, zum Beispiel Kfz-Versicherung, Jahresabos und Mitgliedsbeiträge. Teile sie durch zwölf und plane sie monatlich ein: [Jährliche Kosten im Monatsbudget](/anleitungen/jaehrliche-kosten-im-budget/).",
+                "Gleich mit erledigen: Abos kündigen, die keiner mehr nutzt. [Abos finden und kündigen](/anleitungen/abos-finden-und-kuendigen/).",
+            ]],
+            ["tagesbudget", "Schritt 3: eine Zahl pro Tag", [
+                {"formula": "Tagesbudget = (Einkommen − feste Kosten − Sparrate) ÷ Tage im Monat"},
+                "Diese Zahl ist dein Kompass für den Januar. Noch keine Sparrate? Rechne im ersten Monat mit 0. Rechnen kannst du sie mit dem [Tagesbudget-Rechner](/anleitungen/wie-viel-darf-ich-pro-tag-ausgeben/#rechner).",
+            ]],
+            ["dreissig-tage", "Schritt 4: 30 Tage nur Beträge", [
+                "Viele Vorsätze scheitern nicht am Willen, sondern am Aufwand. Deshalb gilt im ersten Monat nur eine Regel: **Jede Ausgabe mit Betrag aufschreiben, sofort oder am selben Abend.** Keine Kategorien, keine Ziele, kein schlechtes Gewissen.",
+                "Am Monatsende schaust du einmal zurück: Was ist übrig? Wo hat es gezwickt? Erst dann lohnt es sich, eine Sparrate festzulegen oder Kategorien zu ergänzen. Mehr zum Dranbleiben: [Haushaltsbuch führen und durchhalten](/anleitungen/haushaltsbuch-fuehren-tipps/).",
+                {"note": "Wer es sportlicher mag, beginnt mit einer [No-Spend-Challenge](/anleitungen/no-spend-challenge/). Als Dauerzustand taugt sie aber nicht."},
+            ]],
+        ],
+        "app": {
+            "h2": "Mit dem Einfachen Haushaltsbuch ins neue Jahr",
+            "body": [
+                "Einnahmen und feste Kosten trägst du einmal ein, jährliche mit ihrem Fälligkeitsdatum – die App zieht sie in dem Monat ab, in dem sie fällig sind. Danach zeigt der Startbildschirm, was im Monat noch übrig ist, und eine Ausgabe sind zwei Klicks: Betrag eintippen, speichern.",
+                "Am Monatsende erscheint in der Auswertung die Karte **Monatsende**: Wenn du magst, tippst du deinen Kontostand ein. Ab dem zweiten Monat zeigt die App, ob Ausgaben fehlen, die du nicht eingetragen hast. Einmal im Jahr fragt sie: **Stimmen Einkommen und Fixkosten noch?**",
+            ],
+        },
+        "faq": [
+            ["Muss ich am 1. Januar anfangen?",
+             ["Nein. Am besten startest du an dem Tag, an dem dein Gehalt kommt. Dann passt der Budgetmonat zu deinem Geld: [Budget ab Gehaltseingang](/anleitungen/budget-ab-gehaltseingang/)."]],
+            ["Was mache ich mit den Ausgaben von Weihnachten?",
+             ["Sie gehören zum alten Jahr. Im Kassensturz siehst du, was davon noch offen ist, etwa eine Kreditkartenabrechnung. Plane den offenen Betrag im Januar als feste Ausgabe ein."]],
+            ["Papier oder App?",
+             ["Beides funktioniert. Entscheidend ist, dass du es beim Bezahlen oder abends sofort zur Hand hast."]],
+        ],
+    },
 ]

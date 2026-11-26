@@ -389,9 +389,75 @@ def block(code: str, b) -> str:
         return f'<table class="calc">{cap}<tbody>{trs}</tbody></table>'
     if "formula" in b:
         return f'<p class="formula">{inline(b["formula"])}</p>'
+    if "download" in b:  # Knopf zum Herunterladen (seit 25.11.2026, Druckvorlage)
+        label, path, meta = b["download"]
+        return (f'<p class="download"><a class="btn" href="{href(path)}" download>{e(label)}</a>'
+                f' <span class="download__meta">{e(meta)}</span></p>')
+    if "pages" in b:  # Vorschaubilder von Druckseiten nebeneinander
+        imgs = "".join(f'<img src="{href("/img/" + src)}" width="909" height="1287" alt="{e(alt)}" loading="lazy" decoding="async">'
+                       for src, alt in b["pages"])
+        return f'<div class="print-pages">{imgs}</div>'
     if "shot" in b:
         return f'<div class="guide-shot">{phone(b["shot"], b["alt"])}</div>'
     raise ValueError(f"Unbekannter Block: {b}")
+
+
+def rechner(code: str, t: dict) -> str:
+    """Tagesbudget-Rechner (seit 25.11.2026): rechnet nur im Browser (js/rechner.js), speichert nichts.
+    Ohne JavaScript bleibt er verborgen; die Rechenbeispiele der Anleitung stehen weiter als Text da."""
+    play = f"https://play.google.com/store/apps/details?id={PLAY_ID}&hl={PLAY_HL[code]}"
+    cfg = json.dumps({k: t[k] for k in ("locale", "cur", "until", "over_days", "ok", "fast", "over", "fixed_over", "empty", "bar_hint")}, ensure_ascii=False)
+
+    def field(fid: str, label: str, hint: str = "", kind: str = "money") -> str:
+        attrs = ('inputmode="decimal" autocomplete="off" placeholder="0"' if kind == "money"
+                 else 'inputmode="numeric" autocomplete="off" placeholder="1" maxlength="2"')
+        h = f'<span class="calc-tool__hint">{e(hint)}</span>' if hint else ""
+        suffix = f'<span class="calc-tool__cur" aria-hidden="true">{e(t["cur"])}</span>' if kind == "money" and t["cur"] else ""
+        return (f'<label class="calc-tool__field" for="rt-{fid}"><span>{e(label)}</span>{h}'
+                f'<span class="calc-tool__input"><input id="rt-{fid}" type="text" {attrs}>{suffix}</span></label>')
+
+    def post(i: int, label: str, hint: str = "", yearly: bool = False) -> str:
+        fid = f"post{i}"
+        kind = 'data-yearly="1"' if yearly else 'data-fixed="1"'
+        h = f'<small>{e(hint)}</small>' if hint else ""
+        suffix = f'<span class="calc-tool__cur" aria-hidden="true">{e(t["cur"])}</span>' if t["cur"] else ""
+        return (f'<label class="calc-tool__post" for="rt-{fid}"><span>{e(label)}{h}</span>'
+                f'<span class="calc-tool__input"><input id="rt-{fid}" {kind} type="text" inputmode="decimal" '
+                f'autocomplete="off" placeholder="0">{suffix}</span></label>')
+
+    posts = t["posts"]
+    main = "".join(post(i, *x) for i, x in enumerate(posts["main"]))
+    more = "".join(post(i + 20, *x) for i, x in enumerate(posts["more"]))
+    yearly = post(40, t["yearly"], t["yearly_hint"], yearly=True)
+    return f"""<section class="calc-tool" id="rechner" aria-labelledby="rt-h" hidden>
+        <h2 id="rt-h">{e(t['h'])}</h2>
+        {field('income', t['income'], t['income_hint'])}
+        <fieldset class="calc-tool__posts">
+          <legend>{e(t['posts_h'])}<small>{e(t['posts_hint'])}</small></legend>
+          {main}
+          <details class="calc-tool__more"><summary>{e(t['posts_more'])}</summary>{more}{yearly}</details>
+          <p class="calc-tool__fixedsum"><span>{e(t['fixed_sum'])}</span> <b id="rt-fixedsum">–</b></p>
+        </fieldset>
+        <div class="calc-tool__grid calc-tool__spent">
+          {field('spent', t['spent'], t['spent_hint'])}
+        </div>
+        <details class="calc-tool__more"><summary>{e(t['more'])}</summary>
+          <div class="calc-tool__grid">
+            {field('start', t['start'], t['start_hint'], kind='day')}
+          </div>
+        </details>
+        <div class="meter calc-tool__result in" role="status" aria-live="polite" aria-atomic="true">
+          <span class="meter__label">{e(t['result'])}</span>
+          <span class="meter__num" id="rt-avail">–</span>
+          <span class="meter__bar"><i id="rt-fill" style="width:0"></i><b id="rt-mark" style="left:0"></b></span>
+          <span class="calc-tool__perday" id="rt-perday"></span>
+          <span class="meter__note" id="rt-note">{e(t['empty'])}</span>
+        </div>
+        <p class="calc-tool__app">{inline(t['app'])} <a href="{e(play)}">{e(t['app_link'])}</a></p>
+        <p class="calc-tool__privacy">{e(t['privacy'])}</p>
+        <script type="application/json" id="rt-cfg">{cfg}</script>
+        <script src="{href('/js/rechner.js')}?v={STAMP}" defer></script>
+      </section>"""
 
 
 def guide_alts(gid: str) -> dict[str, str]:
@@ -430,6 +496,12 @@ def guide_page(code: str, g: dict) -> str:
                 + "</section>")
     others = "".join(f'<li><a href="{href(guide_path(code, o))}">{e(o["h1"])}</a></li>'
                      for o in related(code, g)) + f'<li><a href="{href(guides_path(code))}">{e(u["all_guides"])}</a></li>'
+    if g.get("tool"):  # Gideon 25.11.2026: oben nur ein Satz, dann sofort der Rechner; Erklärung darunter
+        t = g["tool"]
+        top_html = (f'<p class="lead tool-lead">{inline(t["lead"])}</p>' + rechner(code, t)
+                    + f'<h2 id="so-rechnet">{e(t["explain_h"])}</h2><p class="answer">{inline(g["answer"])}</p>')
+    else:
+        top_html = f'<p class="lead answer">{inline(g["answer"])}</p>'
     hub = BR.HUB_OF[g["id"]]
     ht = BR.TEXT[code][hub]
     crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -450,7 +522,7 @@ def guide_page(code: str, g: dict) -> str:
     <div class="wrap">
       <nav class="crumbs" aria-label="{e(u['crumbs'])}"><a href="{href(home_path(code))}">{e(c['app_name'])}</a> / <a href="{href(guides_path(code))}">{e(u['guides'])}</a> / <a href="{href(hub_path(code, hub))}">{e(ht['name'])}</a></nav>
       <h1>{e(g['h1'])}</h1>
-      <p class="lead answer">{inline(g['answer'])}</p>
+      {top_html}
       <p class="stand">{e(u['updated'])} {e(g['updated_label'])}</p>
       <nav class="toc" aria-label="{e(u['toc'])}"><p>{e(u['toc'])}</p><ol>{toc}<li><a href="#faq">{e(u['faq'])}</a></li></ol></nav>
       {secs}

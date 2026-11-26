@@ -154,6 +154,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-should-i-save/"/>
   </url>
   <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-fuer-senioren/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-fuer-senioren/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-for-elderly-parents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-for-elderly-parents/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-anfangen-neues-jahr/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-anfangen-neues-jahr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
+  </url>
+  <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-grundlagen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/"/>
@@ -329,6 +341,18 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/wie-viel-sollte-man-sparen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-should-i-save/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/how-much-should-i-save/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-for-elderly-parents/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-fuer-senioren/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-for-elderly-parents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-for-elderly-parents/"/>
+  </url>
+  <url>
+    <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nicedevelopments.github.io/haushaltsbuch/anleitungen/haushaltsbuch-anfangen-neues-jahr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nicedevelopments.github.io/haushaltsbuch/en/guides/new-year-budget-plan/"/>
   </url>
   <url>
     <loc>https://nicedevelopments.github.io/haushaltsbuch/en/guides/budget-basics/</loc>

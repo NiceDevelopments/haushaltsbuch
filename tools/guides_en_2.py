@@ -941,4 +941,115 @@ GUIDES = [
              ["It happens. What matters is that the automatic transfer runs in normal months. If it fails often, the amount is set too high – smaller, but every month, is better."]],
         ],
     },
+
+    # ------------------------------------------------------------ seniors / helpers (25 Nov 2026)
+    # Search demand (autocomplete 25 Nov): "helping elderly parents with finances", "budget for elderly",
+    # "budget worksheet for elderly".
+    {
+        "id": "seniors",
+        "slug": "budget-for-elderly-parents",
+        "title": "Budgeting for seniors – and helping an elderly parent with money",
+        "desc": "A simple budget for seniors: pension minus fixed costs, what's left per day, and how adult children can help set it up without taking over.",
+        "h1": "A simple budget for seniors – and for family members who help",
+        "teaser": "Pension minus fixed costs, one number per day – and how to help a parent set it up.",
+        "answer": "**One simple sum is enough: pension minus what goes out for sure.** Divide what's left by the days in the month. You only write down amounts. Family can help the first time.",
+        "updated": "2026-11-25", "updated_label": "November 2026",
+        "related": ["daily", "fixed", "payday"],
+        "sections": [
+            ["calculation", "The one calculation: income minus fixed costs", [
+                {"steps": [
+                    "**Add up the income:** state pension, private or workplace pension, benefits – whatever reliably arrives every month.",
+                    "**Subtract the fixed costs:** rent, utilities, heating, phone, insurance, regular prescription costs, subscriptions, standing orders such as donations.",
+                    "**Divide by the days:** what's left, divided by the days until the next payment, is the money per day for groceries, pharmacy, hairdresser and gifts.",
+                ]},
+                {"calc": [["Pension (after tax)", "1,480.00"], ["− fixed costs", "940.00"], ["= free this month", "540.00"], ["÷ 30 days", ""], ["**per day**", "18.00"]],
+                 "caption": "Example with made-up numbers"},
+                "You can work it out with the [daily budget calculator](/en/guides/how-much-can-i-spend-per-day/#rechner).",
+            ]],
+            ["payday", "Match the budget to the day the money arrives", [
+                "Pensions and benefits are often paid on a fixed day that isn't the 1st, and some are paid every four weeks. If the money arrives on the 28th, a budget from the 1st to the 31st fits badly. Start the budget month on payment day instead: [budget from payday to payday](/en/guides/budget-from-payday/). If you're paid every four weeks, the date moves each month; then budget with the monthly average (13 payments ÷ 12).",
+                "Divide yearly bills such as home insurance or a TV licence by twelve and plan them in monthly: [yearly expenses in a monthly budget](/en/guides/yearly-expenses-monthly-budget/).",
+            ]],
+            ["simple", "Keeping it simple", [
+                {"list": [
+                    "**Write down the amount only.** Categories are optional. If you know what's available per day, you don't need statistics.",
+                    "**At the till or in the evening**, but at the same time every day. Putting receipts in a bowl and writing them down in the evening works well.",
+                    "**Cash counts too.** Don't write down the withdrawal, write down what is actually spent.",
+                    "**Paper is fine.** A notebook or a printed sheet is enough. What matters is that it's within reach every day.",
+                ]},
+            ]],
+            ["family", "For family: helping without taking over", [
+                "It's often adult children or grandchildren who suggest a budget. It works best when your parent decides and stays in charge of their own money:",
+                {"list": [
+                    "**Set it up together once:** copy income and fixed costs from bank statements together. That's the real work. Keeping the budget afterwards is easy.",
+                    "**Show only what's needed:** enter an amount and see what's left. Nothing more.",
+                    "**Ask, don't check up:** look at it together once a month, if your parent wants to.",
+                    "**Legal matters don't belong in the budget.** If you're going to handle a parent's banking, you need formal authority such as a power of attorney. A bank or solicitor can advise.",
+                ]},
+            ]],
+        ],
+        "app": {
+            "h2": "Simple Household Budget for older users",
+            "body": [
+                "The home screen shows one large number: what's left this month after fixed costs. Adding an expense takes two taps: type the amount, save. If the keypad doesn't fit on the screen, for example with very large text, the app shows a **Track now** button instead – one more tap, but the keys stay large.",
+                "Income and fixed costs are entered once, and family members can do that during setup. To be clear: the app has no account and no cloud. Family can't see the numbers remotely. They stay on your parent's phone. From day seven the app shows an ad banner at the top; a one-time purchase removes it for good.",
+            ],
+        },
+        "faq": [
+            ["Do I need a computer to keep a budget?",
+             ["No. A notebook, a printed sheet or an app on the phone is enough. What matters is that it's where you pay or where you sit in the evening."]],
+            ["Do I have to put every expense in a category?",
+             ["No. To answer \"Will the money last until the next payment?\", the amount is enough."]],
+            ["How often should family look at it?",
+             ["As often as your parent wants. Ten minutes once a month is enough for most."]],
+        ],
+    },
+
+    # ------------------------------------------------------------ new year (25 Nov 2026)
+    # Search demand: "new year budget plan", "new year budget template", "new year budgeting tips".
+    {
+        "id": "newyear",
+        "slug": "new-year-budget-plan",
+        "title": "New year budget plan: start a budget in January in 4 steps",
+        "desc": "A new year budget plan in four steps: a money check-up, fixed and yearly costs, a daily budget and 30 days of writing down amounts only – so it lasts past February.",
+        "h1": "New year budget plan: start fresh in 4 steps",
+        "teaser": "A money check-up, yearly bills, a daily budget – and why the first 30 days need amounts only.",
+        "answer": "**Four steps are enough.** Check what's in your account. Write down what goes out for sure. Work out what's left per day. Then, for 30 days, write down amounts only – nothing else.",
+        "updated": "2026-11-25", "updated_label": "November 2026",
+        "related": ["simple", "habit", "yearly"],
+        "sections": [
+            ["checkup", "Step 1: a money check-up after the holidays", [
+                "After the holidays the account is often emptier than expected. Write down where things really stand: balance, unpaid bills, credit card statement, buy-now-pay-later instalments. Don't judge, just record. Next December, this is what you compare against.",
+            ]],
+            ["costs", "Step 2: fixed and yearly costs", [
+                "List everything that leaves every month for sure: rent, utilities, phone, insurance, subscriptions. A checklist: [fixed expenses list](/en/guides/fixed-expenses-list/).",
+                "January is a good month to deal with **yearly** costs, because many of them renew around now. Divide them by twelve and plan them in monthly: [yearly expenses in a monthly budget](/en/guides/yearly-expenses-monthly-budget/).",
+                "While you're at it, cancel the subscriptions nobody uses: [cancel subscriptions](/en/guides/cancel-subscriptions/).",
+            ]],
+            ["daily", "Step 3: one number per day", [
+                {"formula": "Daily budget = (income − fixed costs − savings) ÷ days in the month"},
+                "This number is your compass for January. No savings amount yet? Use 0 for the first month. Work it out with the [daily budget calculator](/en/guides/how-much-can-i-spend-per-day/#rechner).",
+            ]],
+            ["thirty-days", "Step 4: 30 days, amounts only", [
+                "Many resolutions fail not for lack of willpower but because they take too much effort. So the first month has one rule: **write down every expense with its amount, right away or the same evening.** No categories, no goals, no guilt.",
+                "At the end of the month, look back once: what's left? Where did it pinch? Only then is it worth setting a savings amount or adding categories. More on sticking with it: [expense tracking tips](/en/guides/expense-tracking-tips/).",
+                {"note": "If you like a challenge, start with a [no-spend challenge](/en/guides/no-spend-challenge/), but not as a permanent state."},
+            ]],
+        ],
+        "app": {
+            "h2": "Into the new year with Simple Household Budget",
+            "body": [
+                "Enter your income and fixed costs once, yearly ones with their due date – the app deducts them in the month they're due. After that the home screen shows what's left this month, and adding an expense takes two taps: type the amount, save.",
+                "At the end of the month a **Month end** card appears under Analysis: if you like, type in your account balance. From the second month on, the app shows whether spending is missing that you didn't record. Once a year it asks: **Are income and fixed costs still right?**",
+            ],
+        },
+        "faq": [
+            ["Do I have to start on 1 January?",
+             ["No. It's best to start on the day your pay arrives, so the budget month matches your money: [budget from payday to payday](/en/guides/budget-from-payday/)."]],
+            ["What about the holiday spending?",
+             ["It belongs to last year. The check-up shows what's still open, such as a credit card bill. Plan the outstanding amount into January as a fixed cost."]],
+            ["Paper or app?",
+             ["Both work. What matters is having it to hand when you pay or in the evening."]],
+        ],
+    },
 ]
