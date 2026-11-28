@@ -92,7 +92,6 @@ C = {
             "**Sem ligação com o banco** – você nunca digita sua senha do banco em lugar nenhum.",
             "**Sem nuvem, sem estatísticas de uso, sem relatórios de erro.** Por isso também não há sincronização entre aparelhos.",
             "**{languages} idiomas**, do árabe ao vietnamita, entre eles o português. A moeda segue a sua região.",
-            "**Anúncios só a partir do dia {ads_from_day}:** um banner no topo da tela inicial. Os anúncios não veem nenhum número do seu orçamento. Uma compra única, “Remover anúncios”, tira os anúncios para sempre; não há assinatura.",
         ],
         "privacy_link": "Ler a política de privacidade (em inglês)",
         "guides_h2": "Guias para o seu orçamento mensal (em inglês)",
@@ -109,7 +108,7 @@ C = {
         ],
         "faq": [
             ["Quanto custa o app?",
-             ["Você pode usar com anúncios. Só a partir do dia {ads_from_day} ele mostra um banner no topo da tela inicial. A compra única “Remover anúncios” tira os anúncios para sempre; não há assinatura."]],
+             ["É grátis para usar. Depois de alguns dias e dos seus primeiros lançamentos, aparece um pequeno banner de anúncio. A compra única “Remover anúncios” tira o banner para sempre; não há assinatura."]],
             ["Preciso de conta ou dos dados do meu banco?",
              ["Não. Não há login nem ligação com o banco. Você mesmo anota renda, custos fixos e gastos, e tudo fica no seu celular."]],
             ["Tenho que escolher uma categoria para cada gasto?",

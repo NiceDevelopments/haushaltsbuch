@@ -92,7 +92,6 @@ C = {
             "**Sin conexión con el banco:** nunca escribes tus claves en ningún sitio.",
             "**Sin nube, sin estadísticas de uso, sin informes de errores.** Por eso tampoco hay sincronización entre dispositivos.",
             "**{languages} idiomas**, del árabe al vietnamita, entre ellos el español. La moneda se ajusta a tu región.",
-            "**Anuncios no antes del día {ads_from_day}:** un banner arriba en la pantalla principal. Los anuncios no ven ni un solo número de tu presupuesto. Un pago único, «Quitar anuncios», los elimina para siempre; no hay suscripción.",
         ],
         "privacy_link": "Leer la política de privacidad (en inglés)",
         "guides_h2": "Guías para tu presupuesto mensual (en inglés)",
@@ -109,7 +108,7 @@ C = {
         ],
         "faq": [
             ["¿Cuánto cuesta la app?",
-             ["Puedes usarla con anuncios. No antes del día {ads_from_day} muestra un banner arriba en la pantalla principal. El pago único «Quitar anuncios» los elimina para siempre; no hay suscripción."]],
+             ["Es gratis. Después de unos días y de tus primeras entradas aparece un pequeño banner publicitario. El pago único «Quitar anuncios» lo elimina para siempre; no hay suscripción."]],
             ["¿Necesito una cuenta o los datos de mi banco?",
              ["No. No hay inicio de sesión ni conexión con el banco. Tú apuntas ingresos, gastos fijos y gastos, y todo se queda en tu móvil."]],
             ["¿Tengo que elegir una categoría para cada gasto?",

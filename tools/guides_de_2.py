@@ -78,7 +78,7 @@ GUIDES = [
         "app": {
             "h2": "Mit dem Einfachen Haushaltsbuch",
             "body": [
-                "Die App teilt nicht in Prozent-Töpfe, sie rechnet einfacher: Einkommen minus Fixkosten ist dein Monatsbudget. Trägst du die Sparrate als festen Posten bei den Fixkosten ein – die Einrichtung fragt eigens nach dem Sparkonto –, ist sie in jedem Monat vom ersten Tag an aus dem verfügbaren Geld heraus. Genau die Reihenfolge, die die Regel will. Legst du den Posten später an, zählt er ab dem nächsten Zeitraum.",
+                "Die App teilt nicht in Prozent-Töpfe, sie rechnet einfacher: Einkommen minus Fixkosten ist dein Monatsbudget. Trägst du die Sparrate als festen Posten bei den Fixkosten ein – die Einrichtung fragt eigens nach dem Sparkonto –, ist sie in jedem Monat vom ersten Tag an aus dem verfügbaren Geld heraus. Genau die Reihenfolge, die die Regel will. Legst du den Posten später an, wählst du, ob er **Schon diesen Monat** oder **Ab nächstem Monat** zählt.",
                 "Was bleibt, zeigt die große Zahl auf dem Startbildschirm, und jede Ausgabe zieht sie sofort ab.",
             ],
         },
@@ -343,7 +343,7 @@ GUIDES = [
             "h2": "Den Monatsbedarf aus dem Einfachen Haushaltsbuch ablesen",
             "body": [
                 "Die Auswertung zeigt unter **Zusammensetzung**, wie hoch Einnahmen und Fixkosten sind. Die Fixkosten sind der größte Teil deines Monatsbedarfs – eine eingetragene Sparrate ziehst du davon ab, sie ist kein Bedarf. Für den Alltag ist **Pro Tag** mal 30 die Obergrenze; im Notfall kämst du mit weniger aus.",
-                "Die Sparrate für den Notgroschen trägst du als festen Posten bei den Fixkosten ein; legst du ihn nachträglich an, zählt er ab dem nächsten Zeitraum.",
+                "Die Sparrate für den Notgroschen trägst du als festen Posten bei den Fixkosten ein; legst du ihn später an, wählst du, ob er **Schon diesen Monat** oder **Ab nächstem Monat** zählt.",
             ],
             "shot": "de-auswertung.webp",
             "alt": "Einfaches Haushaltsbuch: Auswertung mit Ausgegeben, Übrig, Pro Tag und der Zusammensetzung aus Einnahmen und Fixkosten.",
@@ -399,7 +399,7 @@ GUIDES = [
         "app": {
             "h2": "Mit dem Einfachen Haushaltsbuch",
             "body": [
-                "Die App kostet nichts; frühestens ab dem fünften Tag zeigt sie einen Werbebanner, den ein einmaliger Kauf entfernt. Sie braucht kein Konto und keine Bankverbindung. Die Sparrate gehört zu den Fixkosten (nachträglich angelegt ab dem nächsten Zeitraum); dann zeigt die große Zahl auf dem Startbildschirm nur das Geld, das du wirklich ausgeben kannst.",
+                "Die App ist kostenlos nutzbar (ein kleines Werbebanner lässt sich mit einem Einmalkauf entfernen). Sie braucht kein Konto und keine Bankverbindung. Die Sparrate gehört zu den Fixkosten; dann zeigt die große Zahl auf dem Startbildschirm nur das Geld, das du wirklich ausgeben kannst.",
                 "Kleine Beträge sind schnell erfasst: Betrag eintippen, Speichern antippen. Am Monatsende kannst du in der Auswertung deinen Kontostand eintragen; ab dem zweiten Mal zeigt die App, ob Ausgaben fehlen.",
             ],
         },
@@ -657,7 +657,7 @@ GUIDES = [
         "app": {
             "h2": "Abos im Einfachen Haushaltsbuch",
             "body": [
-                "Abos gehören in der App zu den Fixkosten. Schon die Einrichtung schlägt hinter dem Plus Posten wie Musik-Streaming, Video-Streaming oder Fitnessstudio vor. Später ergänzt du Abos unter **Einstellungen → Einnahmen und Fixkosten** – monatlich, vierteljährlich oder jährlich mit Fälligkeitsdatum. Die App zieht sie danach selbst ab, ab dem nächsten Zeitraum.",
+                "Abos gehören in der App zu den Fixkosten. Schon die Einrichtung schlägt hinter dem Plus Posten wie Musik-Streaming, Video-Streaming oder Fitnessstudio vor. Später ergänzt du Abos unter **Einstellungen → Einnahmen und Fixkosten** – monatlich, vierteljährlich oder jährlich mit Fälligkeitsdatum. Dabei wählst du jeweils, ob das Abo **Schon diesen Monat** oder **Ab nächstem Monat** zählt; danach zieht die App es selbst ab.",
                 "Kündigst du ein Abo, entfernst du den Posten. Er zählt ab dem nächsten Zeitraum nicht mehr – dann zeigt die große Zahl, was dir zusätzlich bleibt.",
             ],
         },
@@ -944,7 +944,7 @@ GUIDES = [
         "app": {
             "h2": "Mit dem Einfachen Haushaltsbuch",
             "body": [
-                "Trag die Sparrate als festen Posten bei den Fixkosten ein – bei der Einrichtung oder später unter **Einstellungen → Einnahmen und Fixkosten**; nachträglich zählt sie ab dem nächsten Zeitraum. Danach ist sie in jedem Monat vom ersten Tag an aus dem verfügbaren Geld heraus, und die große Zahl zeigt nur, was du wirklich ausgeben kannst.",
+                "Trag die Sparrate als festen Posten bei den Fixkosten ein – bei der Einrichtung oder später unter **Einstellungen → Einnahmen und Fixkosten**; dort wählst du, ob sie **Schon diesen Monat** oder **Ab nächstem Monat** zählt. Danach ist sie in jedem Monat vom ersten Tag an aus dem verfügbaren Geld heraus, und die große Zahl zeigt nur, was du wirklich ausgeben kannst.",
                 "Am Monatsende steht in der Auswertung, was übrig ist. Überweist du den Rest aufs Sparkonto, lass **Plus mitnehmen** in den Einstellungen aus – sonst rechnet die App im nächsten Monat mit Geld, das schon weg ist.",
             ],
         },
@@ -1008,7 +1008,7 @@ GUIDES = [
             "h2": "Das Einfache Haushaltsbuch für Ältere",
             "body": [
                 "Auf dem Startbildschirm steht groß eine Zahl: was in diesem Monat nach den festen Kosten noch übrig ist. Eine Ausgabe sind zwei Klicks: Betrag eintippen, speichern. Passt das Ziffernfeld nicht auf den Bildschirm, etwa bei sehr großer Schrift, zeigt die App stattdessen den Knopf **Jetzt tracken**. Das ist ein Klick mehr, dafür bleiben die Tasten groß.",
-                "Einnahmen und feste Kosten trägt man einmal ein. Das können Angehörige beim Einrichten übernehmen. Ehrlich dazu: Die App hat kein Konto und keine Cloud. Angehörige sehen die Zahlen also nicht aus der Ferne, sie bleiben auf dem Handy der Eltern. Frühestens ab dem fünften Tag zeigt die App oben einen Werbebanner; ein einmaliger Kauf entfernt ihn dauerhaft.",
+                "Einnahmen und feste Kosten trägt man einmal ein. Das können Angehörige beim Einrichten übernehmen. Ehrlich dazu: Die App hat kein Konto und keine Cloud. Angehörige sehen die Zahlen also nicht aus der Ferne, sie bleiben auf dem Handy der Eltern.",
             ],
         },
         "faq": [

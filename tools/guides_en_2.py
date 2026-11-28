@@ -78,7 +78,7 @@ GUIDES = [
         "app": {
             "h2": "With Simple Household Budget",
             "body": [
-                "The app doesn't split into percentage pots – it keeps it simpler: income minus fixed costs is your monthly budget. Add your savings as a fixed item – during setup, or later under **Settings → Income and fixed costs** (it then counts from the next period). From then on they're out of the available money on the first day of every month – exactly the order the rule asks for.",
+                "The app doesn't split into percentage pots – it keeps it simpler: income minus fixed costs is your monthly budget. Add your savings as a fixed item – during setup, or later under **Settings → Income and fixed costs**, where you choose whether it counts **This month already** or **From next month**. From then on they're out of the available money on the first day of every month – exactly the order the rule asks for.",
                 "What's left shows as the large number on the home screen, and every expense comes off it right away.",
             ],
         },
@@ -345,7 +345,7 @@ GUIDES = [
             "h2": "Read your monthly need from Simple Household Budget",
             "body": [
                 "The analysis shows under **Breakdown** how much income and fixed costs are. Fixed costs are the biggest part of your monthly need – leave out any savings item, it isn't a need. For the essentials, take the **Per day** figure from the analysis × 30 as an upper limit and trim it to what you'd really need.",
-                "Add your monthly emergency-fund saving as a fixed item; if you add it later, it counts from the next period.",
+                "Add your monthly emergency-fund saving as a fixed item; if you add it later, you choose whether it counts **This month already** or **From next month**.",
             ],
             "shot": "en-summary.webp",
             "alt": "Simple Household Budget: analysis with spent, left, per day and the breakdown into income and fixed costs.",
@@ -400,7 +400,7 @@ GUIDES = [
         "app": {
             "h2": "With Simple Household Budget",
             "body": [
-                "The app is free to use with ads (one banner from day five at the earliest; a one-time purchase removes it) and needs no account and no bank connection. Add your savings as a fixed item (added later, it counts from the next period); then the large number on the home screen only shows money you can really spend.",
+                "The app is free to use (a small banner ad can be removed with a one-time purchase) and needs no account and no bank connection. Add your savings as a fixed item; then the large number on the home screen only shows money you can really spend.",
                 "Small amounts are quick to add: type the amount, tap Save. At month end a card in the analysis asks – optionally – for your account balance. From the second month on, the app compares it with your entries and shows whether you've missed any expenses.",
             ],
         },
@@ -650,7 +650,7 @@ GUIDES = [
         "app": {
             "h2": "Subscriptions in Simple Household Budget",
             "body": [
-                "In the app, subscriptions are fixed costs. Setup already suggests items such as music streaming, video streaming or gym behind the plus button; later you add them under **Settings → Income and fixed costs** – monthly, quarterly or yearly with a due date. The app then deducts them by itself, starting with the next period.",
+                "In the app, subscriptions are fixed costs. Setup already suggests items such as music streaming, video streaming or gym behind the plus button; later you add them under **Settings → Income and fixed costs** – monthly, quarterly or yearly with a due date. For each one you choose whether it counts **This month already** or **From next month**; after that the app deducts it by itself.",
                 "When you cancel one, remove the item; from the next period the large number on the home screen shows how much more you have each month.",
             ],
         },
@@ -944,7 +944,7 @@ GUIDES = [
         "app": {
             "h2": "With Simple Household Budget",
             "body": [
-                "Add your savings as a fixed item – during setup or later under **Settings → Income and fixed costs** (added later, it counts from the next period). From then on they're out of the available money on the first day of every month, and the large number only shows what you can really spend.",
+                "Add your savings as a fixed item – during setup or later under **Settings → Income and fixed costs**, where you choose whether it counts **This month already** or **From next month**. From then on they're out of the available money on the first day of every month, and the large number only shows what you can really spend.",
                 "At month end the analysis shows what's left. If you move the rest to savings, leave **Carry surplus over** switched off in the settings – otherwise the app counts money next month that's already gone.",
             ],
         },
@@ -1008,7 +1008,7 @@ GUIDES = [
             "h2": "Simple Household Budget for older users",
             "body": [
                 "The home screen shows one large number: what's left this month after fixed costs. Adding an expense takes two taps: type the amount, save. If the keypad doesn't fit on the screen, for example with very large text, the app shows a **Track now** button instead – one more tap, but the keys stay large.",
-                "Income and fixed costs are entered once, and family members can do that during setup. To be clear: the app has no account and no cloud. Family can't see the numbers remotely. They stay on your parent's phone. From day five at the earliest, the app shows an ad banner at the top; a one-time purchase removes it for good.",
+                "Income and fixed costs are entered once, and family members can do that during setup. To be clear: the app has no account and no cloud. Family can't see the numbers remotely. They stay on your parent's phone.",
             ],
         },
         "faq": [

@@ -5,7 +5,8 @@ schreiben sie als Platzhalter {name}; build.py setzt sie überall ein. Ändert s
 umstellen, `python -I tools/build.py`. Quelle: ../CLAUDE.md (App-Repo).
 
 Preis/Gratisumfang (in jeder Sprache als Satz übersetzt, Inhalt hier festgelegt):
-- Alle Funktionen gratis, mit Werbung: frühestens ab dem {ads_from_day}. Tag ein Banner oben auf dem Startbildschirm.
+- Alle Funktionen gratis, mit einem kleinen Werbebanner (frühestens ab Tag {ads_from_day}, auf der Website seit 28.11.2026
+  ohne Tageszahl und nur knapp in der FAQ „Was kostet die App?“ – Gideon: Werbung nicht hervorheben).
 - Einmalkauf „Werbung entfernen“ (Produkt `werbefrei`) schaltet sie dauerhaft ab; kein Abo.
   Deutschland 2,99 €, andere Länder Umrechnung von Google Play (Preis auf der Seite nicht nennen).
 """

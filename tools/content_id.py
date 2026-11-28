@@ -90,7 +90,6 @@ C = {
             "**Tanpa koneksi ke bank** – kamu tidak pernah memasukkan data login bank di mana pun.",
             "**Tanpa cloud, tanpa statistik pemakaian, tanpa laporan error.** Artinya juga tidak ada sinkronisasi antarperangkat.",
             "**{languages} bahasa**, dari Arab sampai Vietnam, termasuk bahasa Indonesia. Mata uang mengikuti wilayahmu – rupiah tanpa angka desimal.",
-            "**Iklan paling cepat mulai hari ke-{ads_from_day}:** satu banner di bagian atas layar utama. Iklan tidak melihat satu angka pun dari anggaranmu. Pembelian sekali bayar “Hapus iklan” menghilangkannya selamanya; tidak ada langganan.",
         ],
         "privacy_link": "Baca kebijakan privasi (bahasa Inggris)",
         "guides_h2": "Panduan untuk anggaran bulananmu (bahasa Inggris)",
@@ -107,7 +106,7 @@ C = {
         ],
         "faq": [
             ["Berapa harga aplikasinya?",
-             ["Kamu bisa memakainya dengan iklan. Paling cepat mulai hari ke-{ads_from_day}, aplikasi menampilkan satu banner di bagian atas layar utama. Pembelian sekali bayar “Hapus iklan” mematikannya selamanya; tidak ada langganan."]],
+             ["Gratis digunakan. Setelah beberapa hari dan setelah kamu membuat catatan pertama, muncul banner iklan kecil. Pembelian sekali bayar “Hapus iklan” menghilangkannya selamanya; tidak ada langganan."]],
             ["Apakah saya perlu akun atau data bank?",
              ["Tidak. Tidak ada login dan tidak ada koneksi ke bank. Kamu sendiri yang mencatat pemasukan, biaya tetap, dan pengeluaran, dan semuanya tetap di HP-mu."]],
             ["Apakah setiap pengeluaran harus diberi kategori?",
