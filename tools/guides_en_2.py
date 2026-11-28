@@ -95,16 +95,28 @@ GUIDES = [
     {
         "id": "groceries",
         "slug": "how-much-to-spend-on-groceries",
-        "title": "How much should I spend on groceries a month? Find your number",
-        "desc": "How much should you spend on groceries? Skip the averages: measure your own spending in four weeks, set a weekly budget and bring it down without going hungry.",
+        # 28.11.2026: Gegenstueck zur deutschen Seite (Titel "Lebensmittel pro Monat: 1, 2, 4 Personen").
+        # Belegte Zahlen gibt es hier nur fuer Deutschland (Destatis LWR 2024) - deshalb ausdruecklich so
+        # beschriftet; USDA-Werte liessen sich am 28.11. nicht an der Quelle pruefen (Seite gesperrt).
+        "title": "Groceries per month for 1, 2 or 4 people (Germany) – and yours",
+        "desc": "Groceries per month in Germany (official statistics): 1 person €270, 2 people €505, 4 people €759 – per person and per week, and how to find your own number.",
         "h1": "How much should I spend on groceries a month?",
-        "teaser": "Measure your own number in four weeks instead of chasing averages.",
-        "answer": "**The right amount is what you actually spend in four normal weeks – minus what you can cut without missing it.** Write down every grocery shop for four weeks, divide the total by four and multiply by 4.35 for a month. €202 over four weeks comes to about €220 a month.",
+        "teaser": "Averages for 1 to 4 people – and your own number in four weeks.",
+        "answer": "**In Germany, households spend on average per month: 1 person €270, 2 people €505, 3 people €653, 4 people €759** – food, drinks and tobacco together, according to the Federal Statistical Office (2024). Per person it gets cheaper with every extra member: €270 alone, about €190 each in a four-person household. Whether that fits you, four weeks of writing it down will show.",
         "updated": U, "updated_label": UL,
         "related": ["daily", "categories", "envelope"],
         "sections": [
-            ["averages", "Why averages don't help much", [
-                "Tables of amounts per person are popular, but they mix city and countryside, discount stores and organic shops, canteen lunches and home cooking. No average can tell you whether your number is “too high” – only comparing yourself before and after a change can.",
+            ["averages", "Groceries per month: the average for 1 to 4 people", [
+                {"table": [
+                    ["Household", "per month", "per person, per month", "per week (whole household)"],
+                    ["1 person", "€270", "€270", "about €62"],
+                    ["2 people", "€505", "about €253", "about €116"],
+                    ["3 people", "€653", "about €218", "about €150"],
+                    ["4 people", "€759", "about €190", "about €174"],
+                ]},
+                "**Source:** [Federal Statistical Office of Germany (Destatis), continuous household budget surveys – consumer spending by household size](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/Konsumausgaben-Lebenshaltungskosten/Tabellen/privater-konsum-haushaltsgroesse-lwr.html) (in German), average for 2024 (table dated 17 August 2026). The “per month” column is from the table; “per person” and “per week” are our own conversion, rounded.",
+                "**What’s included:** food, drinks and tobacco – that’s what the row in the table is called; alcoholic drinks count as drinks in the official breakdown. If you don’t smoke and buy little alcohol, your grocery bill alone will tend to be a bit lower. Eating out, canteen lunches and takeaway are **not** included. Prices and habits differ from country to country, so take these as a rough guide outside Germany.",
+                "Averages like these mix city and countryside, discount stores and organic shops, canteen lunches and home cooking. No average can tell you whether your number is “too high” – only comparing yourself before and after a change can.",
                 "So measure first, decide second.",
             ]],
             ["four-weeks", "Find your own number in four weeks", [
@@ -144,6 +156,10 @@ GUIDES = [
         "faq": [
             ["Do toiletries count as groceries?",
              ["Ideally not. Washing powder, shower gel and toilet paper are often a surprisingly large part of the shop. Tracked separately, you see what really goes on food."]],
+            ["How much does one person spend on groceries a month?",
+             ["A one-person household in Germany spends €270 a month on average on food, drinks and tobacco (Federal Statistical Office, 2024) – about €62 a week. Without alcohol and tobacco it’s a little less."]],
+            ["How much does a family of four spend on groceries?",
+             ["In Germany a four-person household spends €759 a month on average – about €174 a week for everyone together, or about €190 per person a month."]],
             ["How do I work it out for a family?",
              ["The same way: write down everything the household spends on food for four weeks. You only need a per-person figure if you're splitting the costs."]],
             ["Why multiply by 4.35 and not by 4?",

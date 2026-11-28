@@ -96,24 +96,29 @@ GUIDES = [
     {
         "id": "groceries",
         "slug": "wie-viel-geld-fuer-lebensmittel",
-        "title": "Wie viel Geld für Lebensmittel im Monat? So findest du deinen Betrag",
-        "desc": "Wie viel Geld für Lebensmittel pro Monat? Durchschnitt für 1 bis 4 Personen – und wie du in vier Wochen deinen eigenen Betrag ermittelst und senkst.",
-        "h1": "Wie viel Geld für Lebensmittel im Monat?",
-        "teaser": "Durchschnitt für 1 bis 4 Personen – und dein eigener Betrag in vier Wochen.",
-        "answer": "**Im Schnitt geben Haushalte in Deutschland 270 € (eine Person) bis 759 € (vier Personen) im Monat für Nahrungsmittel und Getränke aus.** Dein passender Betrag ist der, den du in vier normalen Wochen tatsächlich ausgibst – minus das, was du ohne Verzicht einsparen kannst. Schreib vier Wochen lang jeden Lebensmitteleinkauf auf, teile die Summe durch vier und rechne mal 4,35 auf den Monat hoch. Bei 202 € in vier Wochen sind das rund 220 € im Monat.",
+        # 28.11.2026: Search Console zeigt Impressionen (Pos. ~50) fuer "lebensmittel pro monat 1 person /
+        # 4 personen", "ausgaben lebensmittel pro monat" -> Titel auf diese Woerter, Tabelle mit pro Person
+        # und pro Woche (Destatis LWR 2024, Tabelle Stand 17.08.2026, nachgesehen 28.11.2026).
+        "title": "Lebensmittel pro Monat: Ausgaben für 1, 2, 4 Personen",
+        "desc": "Ausgaben für Lebensmittel pro Monat laut Statistischem Bundesamt: 1 Person 270 €, 2 Personen 505 €, 4 Personen 759 € – auch pro Person und pro Woche.",
+        "h1": "Lebensmittel pro Monat: wie viel für 1, 2, 3 oder 4 Personen?",
+        "teaser": "Durchschnitt für 1 bis 4 Personen – pro Monat, pro Person, pro Woche.",
+        "answer": "**Im Schnitt geben Haushalte in Deutschland im Monat aus: 1 Person 270 €, 2 Personen 505 €, 3 Personen 653 €, 4 Personen 759 €** – für Essen, Getränke und Tabak zusammen, laut Statistischem Bundesamt (Jahr 2024). Pro Person wird es mit jedem weiteren Mitglied günstiger: allein 270 €, zu viert rund 190 € pro Kopf. Ob das zu dir passt, zeigen vier Wochen Aufschreiben.",
         "updated": U, "updated_label": UL,
         "related": ["daily", "categories", "envelope"],
         "sections": [
-            ["warum-nicht-durchschnitt", "Was Haushalte im Schnitt ausgeben – und warum das wenig über dich sagt", [
+            ["warum-nicht-durchschnitt", "Lebensmittel pro Monat: der Durchschnitt für 1 bis 4 Personen", [
                 {"table": [
-                    ["Haushalt", "pro Monat"],
-                    ["1 Person", "270 €"],
-                    ["2 Personen", "505 €"],
-                    ["3 Personen", "653 €"],
-                    ["4 Personen", "759 €"],
+                    ["Haushalt", "pro Monat", "pro Person im Monat", "pro Woche (ganzer Haushalt)"],
+                    ["1 Person", "270 €", "270 €", "rund 62 €"],
+                    ["2 Personen", "505 €", "rund 253 €", "rund 116 €"],
+                    ["3 Personen", "653 €", "rund 218 €", "rund 150 €"],
+                    ["4 Personen", "759 €", "rund 190 €", "rund 174 €"],
                 ]},
-                "Nahrungsmittel, Getränke und Tabakwaren, Durchschnitt 2024 laut [Statistischem Bundesamt, Laufende Wirtschaftsrechnungen](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/Konsumausgaben-Lebenshaltungskosten/Tabellen/privater-konsum-haushaltsgroesse-lwr.html).",
-                "Tabellen mit Beträgen pro Person sind beliebt, aber sie mischen Großstadt und Land, Discounter und Bioladen, Kantine und Selbstkocher. Ob dein Betrag „zu hoch“ ist, sagt dir kein Durchschnitt – nur der Vergleich mit dir selbst vor und nach einer Änderung.",
+                "**Quelle:** [Statistisches Bundesamt, Laufende Wirtschaftsrechnungen – Konsumausgaben nach Haushaltsgröße](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/Konsumausgaben-Lebenshaltungskosten/Tabellen/privater-konsum-haushaltsgroesse-lwr.html), Durchschnitt des Jahres 2024 (Tabelle mit Stand 17. August 2026). Die Spalte „pro Monat“ steht so in der Tabelle; „pro Person“ und „pro Woche“ haben wir daraus umgerechnet und gerundet.",
+                "**Was drin ist:** Nahrungsmittel, Getränke und Tabakwaren – so heißt die Zeile in der Tabelle; alkoholische Getränke zählen nach der amtlichen Einteilung dazu. Wer nicht raucht und wenig Alkohol kauft, liegt für reine Lebensmittel also eher etwas darunter. Essen im Restaurant, in der Kantine oder vom Imbiss ist **nicht** drin.",
+                "**Warum zu viert pro Kopf weniger?** Das sagt die Statistik nicht. Naheliegend ist: In größeren Haushalten leben oft Kinder, die weniger essen, und große Packungen sind pro Kilo meist günstiger.",
+                "Solche Durchschnitte mischen Großstadt und Land, Discounter und Bioladen, Kantine und Selbstkocher. Ob dein Betrag „zu hoch“ ist, sagt dir deshalb kein Durchschnitt – nur der Vergleich mit dir selbst vor und nach einer Änderung.",
                 "Deshalb zuerst messen, dann entscheiden.",
             ]],
             ["vier-wochen", "Den eigenen Betrag in vier Wochen ermitteln", [
@@ -153,6 +158,10 @@ GUIDES = [
         "faq": [
             ["Zählen Drogerieartikel zu den Lebensmitteln?",
              ["Besser nicht. Waschmittel, Duschgel und Klopapier sind oft ein überraschend großer Teil des Einkaufs. Getrennt aufgeschrieben siehst du, was wirklich fürs Essen draufgeht."]],
+            ["Wie viel Geld für Lebensmittel braucht eine Person im Monat?",
+             ["Ein Ein-Personen-Haushalt in Deutschland gibt im Schnitt 270 € im Monat für Essen, Getränke und Tabak aus (Statistisches Bundesamt, 2024) – rund 62 € pro Woche. Ohne Alkohol und Tabak ist es etwas weniger."]],
+            ["Wie viel Geld für Lebensmittel braucht eine Familie mit 4 Personen?",
+             ["Ein Haushalt mit 4 Personen gibt im Schnitt 759 € im Monat aus, also rund 174 € pro Woche für alle zusammen oder rund 190 € pro Person im Monat."]],
             ["Wie rechne ich für mehrere Personen?",
              ["Genauso: vier Wochen alles aufschreiben, was der Haushalt an Lebensmitteln kauft. Ein Betrag „pro Person“ ist nur nötig, wenn ihr euch die Kosten teilen wollt."]],
             ["Warum mal 4,35 und nicht mal 4?",
