@@ -70,7 +70,7 @@ C = {
              "shot": "meter"},
             {"kicker": "Análisis", "h2": "Todo el mes en tres números",
              "body": ["Gastado, disponible y media por día. Además, un gráfico por día y el desglose de tu mes: ingresos, gastos fijos, para gastar.",
-                      "Sin paneles ni doce gráficos. Si quieres, lo que sobra pasa al mes siguiente."],
+                      "Sin paneles ni doce gráficos. Si quieres, lo que sobra pasa al mes siguiente: al final de tu segundo mes, la app te lo pregunta una vez."],
              "shot": "es-summary.webp"},
         ],
         "simple": {
@@ -92,7 +92,7 @@ C = {
             "**Sin conexión con el banco:** nunca escribes tus claves en ningún sitio.",
             "**Sin nube, sin estadísticas de uso, sin informes de errores.** Por eso tampoco hay sincronización entre dispositivos.",
             "**{languages} idiomas**, del árabe al vietnamita, entre ellos el español. La moneda se ajusta a tu región.",
-            "**Anuncios desde el día {ads_from_day}:** un banner arriba en la pantalla principal. Los anuncios no ven ni un solo número de tu presupuesto. Un pago único, «Quitar anuncios», los elimina para siempre; no hay suscripción.",
+            "**Anuncios no antes del día {ads_from_day}:** un banner arriba en la pantalla principal. Los anuncios no ven ni un solo número de tu presupuesto. Un pago único, «Quitar anuncios», los elimina para siempre; no hay suscripción.",
         ],
         "privacy_link": "Leer la política de privacidad (en inglés)",
         "guides_h2": "Guías para tu presupuesto mensual (en inglés)",
@@ -109,7 +109,7 @@ C = {
         ],
         "faq": [
             ["¿Cuánto cuesta la app?",
-             ["Puedes usarla con anuncios. A partir del día {ads_from_day} muestra un banner arriba en la pantalla principal. El pago único «Quitar anuncios» los elimina para siempre; no hay suscripción."]],
+             ["Puedes usarla con anuncios. No antes del día {ads_from_day} muestra un banner arriba en la pantalla principal. El pago único «Quitar anuncios» los elimina para siempre; no hay suscripción."]],
             ["¿Necesito una cuenta o los datos de mi banco?",
              ["No. No hay inicio de sesión ni conexión con el banco. Tú apuntas ingresos, gastos fijos y gastos, y todo se queda en tu móvil."]],
             ["¿Tengo que elegir una categoría para cada gasto?",

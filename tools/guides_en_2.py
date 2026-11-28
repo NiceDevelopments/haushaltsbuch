@@ -384,7 +384,7 @@ GUIDES = [
         "app": {
             "h2": "With Simple Household Budget",
             "body": [
-                "The app is free to use with ads (one banner from day seven; a one-time purchase removes it) and needs no account and no bank connection. Add your savings as a fixed item (added later, it counts from the next period); then the large number on the home screen only shows money you can really spend.",
+                "The app is free to use with ads (one banner from day five at the earliest; a one-time purchase removes it) and needs no account and no bank connection. Add your savings as a fixed item (added later, it counts from the next period); then the large number on the home screen only shows money you can really spend.",
                 "Small amounts are quick to add: type the amount, tap Save. At month end a card in the analysis asks – optionally – for your account balance. From the second month on, the app compares it with your entries and shows whether you've missed any expenses.",
             ],
         },
@@ -992,7 +992,7 @@ GUIDES = [
             "h2": "Simple Household Budget for older users",
             "body": [
                 "The home screen shows one large number: what's left this month after fixed costs. Adding an expense takes two taps: type the amount, save. If the keypad doesn't fit on the screen, for example with very large text, the app shows a **Track now** button instead – one more tap, but the keys stay large.",
-                "Income and fixed costs are entered once, and family members can do that during setup. To be clear: the app has no account and no cloud. Family can't see the numbers remotely. They stay on your parent's phone. From day seven the app shows an ad banner at the top; a one-time purchase removes it for good.",
+                "Income and fixed costs are entered once, and family members can do that during setup. To be clear: the app has no account and no cloud. Family can't see the numbers remotely. They stay on your parent's phone. From day five at the earliest, the app shows an ad banner at the top; a one-time purchase removes it for good.",
             ],
         },
         "faq": [

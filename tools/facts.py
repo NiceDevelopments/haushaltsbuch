@@ -5,13 +5,13 @@ schreiben sie als Platzhalter {name}; build.py setzt sie überall ein. Ändert s
 umstellen, `python -I tools/build.py`. Quelle: ../CLAUDE.md (App-Repo).
 
 Preis/Gratisumfang (in jeder Sprache als Satz übersetzt, Inhalt hier festgelegt):
-- Alle Funktionen gratis, mit Werbung: ab dem {ads_from_day}. Tag ein Banner oben auf dem Startbildschirm.
+- Alle Funktionen gratis, mit Werbung: frühestens ab dem {ads_from_day}. Tag ein Banner oben auf dem Startbildschirm.
 - Einmalkauf „Werbung entfernen“ (Produkt `werbefrei`) schaltet sie dauerhaft ab; kein Abo.
   Deutschland 2,99 €, andere Länder Umrechnung von Google Play (Preis auf der Seite nicht nennen).
 """
 
 FACTS = {
-    "ads_from_day": "7",     # Banner ab dem siebten Tag
+    "ads_from_day": "5",     # Banner frühestens ab dem fünften Tag (seit App 0.44)
     "languages": "26",       # Sprachen der App (seit Version 0.38, 23.11.2026)
 }
 

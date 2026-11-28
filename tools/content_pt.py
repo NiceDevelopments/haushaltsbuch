@@ -70,7 +70,7 @@ C = {
              "shot": "meter"},
             {"kicker": "Análise", "h2": "O mês inteiro em três números",
              "body": ["Gasto, restante e média por dia. Além disso, um gráfico por dia e a composição do seu mês: renda, custos fixos, para gastar.",
-                      "Sem painéis, sem doze gráficos. Se quiser, o que sobra passa para o mês seguinte."],
+                      "Sem painéis, sem doze gráficos. Se quiser, o que sobra passa para o mês seguinte: no fim do seu segundo mês, o app pergunta uma vez."],
              "shot": "pt-summary.webp"},
         ],
         "simple": {
@@ -92,7 +92,7 @@ C = {
             "**Sem ligação com o banco** – você nunca digita sua senha do banco em lugar nenhum.",
             "**Sem nuvem, sem estatísticas de uso, sem relatórios de erro.** Por isso também não há sincronização entre aparelhos.",
             "**{languages} idiomas**, do árabe ao vietnamita, entre eles o português. A moeda segue a sua região.",
-            "**Anúncios a partir do dia {ads_from_day}:** um banner no topo da tela inicial. Os anúncios não veem nenhum número do seu orçamento. Uma compra única, “Remover anúncios”, tira os anúncios para sempre; não há assinatura.",
+            "**Anúncios só a partir do dia {ads_from_day}:** um banner no topo da tela inicial. Os anúncios não veem nenhum número do seu orçamento. Uma compra única, “Remover anúncios”, tira os anúncios para sempre; não há assinatura.",
         ],
         "privacy_link": "Ler a política de privacidade (em inglês)",
         "guides_h2": "Guias para o seu orçamento mensal (em inglês)",
@@ -109,7 +109,7 @@ C = {
         ],
         "faq": [
             ["Quanto custa o app?",
-             ["Você pode usar com anúncios. A partir do dia {ads_from_day} ele mostra um banner no topo da tela inicial. A compra única “Remover anúncios” tira os anúncios para sempre; não há assinatura."]],
+             ["Você pode usar com anúncios. Só a partir do dia {ads_from_day} ele mostra um banner no topo da tela inicial. A compra única “Remover anúncios” tira os anúncios para sempre; não há assinatura."]],
             ["Preciso de conta ou dos dados do meu banco?",
              ["Não. Não há login nem ligação com o banco. Você mesmo anota renda, custos fixos e gastos, e tudo fica no seu celular."]],
             ["Tenho que escolher uma categoria para cada gasto?",

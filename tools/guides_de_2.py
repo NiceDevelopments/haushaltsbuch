@@ -390,7 +390,7 @@ GUIDES = [
         "app": {
             "h2": "Mit dem Einfachen Haushaltsbuch",
             "body": [
-                "Die App kostet nichts; ab dem siebten Tag zeigt sie einen Werbebanner, den ein einmaliger Kauf entfernt. Sie braucht kein Konto und keine Bankverbindung. Die Sparrate gehört zu den Fixkosten (nachträglich angelegt ab dem nächsten Zeitraum); dann zeigt die große Zahl auf dem Startbildschirm nur das Geld, das du wirklich ausgeben kannst.",
+                "Die App kostet nichts; frühestens ab dem fünften Tag zeigt sie einen Werbebanner, den ein einmaliger Kauf entfernt. Sie braucht kein Konto und keine Bankverbindung. Die Sparrate gehört zu den Fixkosten (nachträglich angelegt ab dem nächsten Zeitraum); dann zeigt die große Zahl auf dem Startbildschirm nur das Geld, das du wirklich ausgeben kannst.",
                 "Kleine Beträge sind schnell erfasst: Betrag eintippen, Speichern antippen. Am Monatsende kannst du in der Auswertung deinen Kontostand eintragen; ab dem zweiten Mal zeigt die App, ob Ausgaben fehlen.",
             ],
         },
@@ -999,7 +999,7 @@ GUIDES = [
             "h2": "Das Einfache Haushaltsbuch für Ältere",
             "body": [
                 "Auf dem Startbildschirm steht groß eine Zahl: was in diesem Monat nach den festen Kosten noch übrig ist. Eine Ausgabe sind zwei Klicks: Betrag eintippen, speichern. Passt das Ziffernfeld nicht auf den Bildschirm, etwa bei sehr großer Schrift, zeigt die App stattdessen den Knopf **Jetzt tracken**. Das ist ein Klick mehr, dafür bleiben die Tasten groß.",
-                "Einnahmen und feste Kosten trägt man einmal ein. Das können Angehörige beim Einrichten übernehmen. Ehrlich dazu: Die App hat kein Konto und keine Cloud. Angehörige sehen die Zahlen also nicht aus der Ferne, sie bleiben auf dem Handy der Eltern. Ab dem siebten Tag zeigt die App oben einen Werbebanner; ein einmaliger Kauf entfernt ihn dauerhaft.",
+                "Einnahmen und feste Kosten trägt man einmal ein. Das können Angehörige beim Einrichten übernehmen. Ehrlich dazu: Die App hat kein Konto und keine Cloud. Angehörige sehen die Zahlen also nicht aus der Ferne, sie bleiben auf dem Handy der Eltern. Frühestens ab dem fünften Tag zeigt die App oben einen Werbebanner; ein einmaliger Kauf entfernt ihn dauerhaft.",
             ],
         },
         "faq": [
